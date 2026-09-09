@@ -2,7 +2,7 @@ const starAsset = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3
 const reelsAccentLeft = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F1d3690be565143f1b94b745b40f056f9?format=webp&width=800&height=1200";
 const reelsAccentRight = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fbefca5d7c9284f50ac19f67a0f009e4a?format=webp&width=800&height=1200";
 const aboutAccent = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F198d7198f1f24e57add9915f01a4575d?format=webp&width=800&height=1200";
-const noiseCircle = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F0dc5039d6c18499890e67dbb43e36060?format=webp&width=800&height=1200";
+const noiseCircle = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F35a2232877f64b53928757221e7d26a0";
 
 function StarBurst({ className = "" }: { className?: string }) {
   return <img src={starAsset} alt="" aria-hidden="true" className={`object-contain ${className}`} />;
@@ -150,7 +150,8 @@ export default function Index() {
       </section>
 
       <section className="relative flex min-h-[390px] items-center justify-center overflow-hidden bg-[#f4f4f2] px-6 py-20 text-white md:min-h-[470px] lg:min-h-[540px]">
-        <div className="absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 rounded-full bg-black bg-cover bg-center shadow-[0_20px_50px_rgba(0,0,0,.35)] sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" style={{ backgroundImage: `url('${noiseCircle}')` }} />
+        <div className="absolute inset-0 bg-[length:36px_36px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }} />
+        <img src={noiseCircle} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 object-contain sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" />
         <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border-[1.5px] border-white px-6 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">Get In Touch</button></div>
       </section>
 
