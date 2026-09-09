@@ -69,7 +69,7 @@ function Socials() {
 
 export default function Index() {
   return (
-    <div className="w-full bg-white">
+    <div id="top" className="w-full bg-white">
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
         <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block lg:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/2ff7542cfed34b54dc9af21d4b28ee166205a3f0?width=1980')" }} />
@@ -99,7 +99,7 @@ export default function Index() {
       </div>
       </div>
 
-      <section className="relative flex w-full items-center overflow-hidden px-6 py-20 sm:px-10 md:px-[30px] md:py-[151px] lg:px-[30px] lg:py-[151px]">
+      <section id="services" className="relative flex w-full items-center overflow-hidden px-6 py-20 sm:px-10 md:px-[30px] md:py-[151px] lg:px-[30px] lg:py-[151px]">
         <div className="absolute inset-0 bg-[length:50px_50px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/872eb4421166530379c4a733827e95d380a961a8?width=2880')" }} />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative mx-auto flex w-full max-w-[931px] flex-col items-start gap-6 border-l-[1.56px] border-white pl-4 md:flex-row md:items-end md:justify-between md:gap-10">
@@ -136,7 +136,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-24 md:px-[50px] md:py-[140px] lg:px-[calc((100%-758px)/2)] lg:py-[162px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d429040f8f56f15156add247c32197f0314650d0?width=2880')" }}>
+      <section id="about" className="relative scroll-mt-[63px] overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-24 md:px-[50px] md:py-[140px] lg:px-[calc((100%-758px)/2)] lg:py-[162px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d429040f8f56f15156add247c32197f0314650d0?width=2880')" }}>
         <img src={aboutAccent} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[120%] w-[110%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain opacity-70 sm:h-[125%] lg:h-[135%] lg:w-[842px]" />
         <div className="relative mx-auto flex max-w-[760px] flex-col gap-3">
           <header className="flex items-center justify-between border-b border-black pb-2"><h2 className="font-sans text-[38px] font-bold uppercase leading-none text-[#121212] sm:text-[54px]">About</h2><svg className="h-8 w-8" viewBox="0 0 43 41" fill="none"><path d="M4.18 10.99h33.95L21.16 39.42 4.18 10.99Z" stroke="black" strokeWidth="1.53" /></svg></header>
@@ -149,7 +149,7 @@ export default function Index() {
         <div className="mx-auto grid max-w-[1396px] grid-cols-2 items-center gap-3 md:grid-cols-4 lg:flex lg:justify-between lg:gap-4">{logoSources.map((src, index) => <img key={src + index} src={src} alt="Client logo" className="h-24 w-full object-contain md:h-32 lg:h-[107px] lg:w-[143px]" />)}</div>
       </section>
 
-      <section className="relative flex min-h-[390px] items-center justify-center overflow-hidden bg-[#f4f4f2] px-6 py-20 text-white md:min-h-[470px] lg:min-h-[540px]">
+      <section id="contact" className="relative flex min-h-[390px] scroll-mt-[63px] items-center justify-center overflow-hidden bg-[#f4f4f2] px-6 py-20 text-white md:min-h-[470px] lg:min-h-[540px]">
         <div className="absolute inset-0 bg-[length:240px_240px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
         <img src={noiseCircle} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 object-contain sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" />
         <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border-[1.5px] border-white px-6 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">Get In Touch</button></div>
