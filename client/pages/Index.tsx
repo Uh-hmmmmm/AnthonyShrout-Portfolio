@@ -1,11 +1,11 @@
-function StarBurst({ className = "", tone = "light" }: { className?: string; tone?: "light" | "dark" }) {
-  const fill = tone === "light" ? "bg-[#d9d9d9]" : "bg-transparent border border-white";
-  return (
-    <div className={`relative ${className}`}>
-      <div className={`absolute left-0 top-0 h-[29px] w-[29px] rotate-45 ${fill}`} />
-      <div className={`absolute left-[6px] top-[6px] h-[29px] w-[29px] ${fill}`} />
-    </div>
-  );
+const starAsset = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Ff35e5891ee674610a101c8bb2b597dff?format=webp&width=800&height=1200";
+const reelsAccentLeft = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F1d3690be565143f1b94b745b40f056f9?format=webp&width=800&height=1200";
+const reelsAccentRight = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fbefca5d7c9284f50ac19f67a0f009e4a?format=webp&width=800&height=1200";
+const aboutAccent = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F198d7198f1f24e57add9915f01a4575d?format=webp&width=800&height=1200";
+const noiseCircle = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F0dc5039d6c18499890e67dbb43e36060?format=webp&width=800&height=1200";
+
+function StarBurst({ className = "" }: { className?: string }) {
+  return <img src={starAsset} alt="" aria-hidden="true" className={`object-contain ${className}`} />;
 }
 
 function TriangleIcon({ className = "" }: { className?: string }) {
@@ -107,7 +107,7 @@ export default function Index() {
             <p className="max-w-[418px] text-left text-[32px] font-normal uppercase leading-[0.95] text-white sm:max-w-[520px] md:max-w-[600px] lg:max-w-[700px] lg:text-[38px]">The space between a great <span className="font-bold">idea</span> and a great <span className="font-bold">production</span> is <span className="font-bold">experience</span>.</p>
             <button className="border-[1.5px] border-white px-5 py-[5px] font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">My Work</button>
           </div>
-          <div className="flex items-center gap-4"><StarBurst tone="dark" className="h-[30px] w-[30px]" /><TriangleIcon className="h-[24px] w-[32px]" /><CloverIcon className="h-[27px] w-[29px]" /></div>
+          <div className="flex items-center gap-4"><StarBurst className="h-[30px] w-[30px]" /><TriangleIcon className="h-[24px] w-[32px]" /><CloverIcon className="h-[27px] w-[29px]" /></div>
         </div>
       </section>
 
@@ -126,8 +126,8 @@ export default function Index() {
           </div>
           <button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white sm:px-10">Contact Me</button>
         </div>
-        <span className="pointer-events-none absolute -left-32 top-[40%] hidden font-serif text-[360px] leading-none text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.2)] lg:block">A</span>
-        <span className="pointer-events-none absolute -right-32 top-[40%] hidden font-serif text-[360px] leading-none text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.2)] lg:block">S</span>
+        <img src={reelsAccentLeft} alt="" aria-hidden="true" className="pointer-events-none absolute -left-32 top-[28%] hidden h-[603px] w-[793px] max-w-none object-contain lg:block lg:h-[680px] lg:w-[894px]" />
+        <img src={reelsAccentRight} alt="" aria-hidden="true" className="pointer-events-none absolute -right-32 top-[28%] hidden h-[603px] w-[793px] max-w-none object-contain lg:block lg:h-[680px] lg:w-[894px]" />
       </section>
 
       <section className="relative overflow-hidden bg-black bg-cover bg-center bg-no-repeat px-6 py-10 text-white md:px-[66px] md:py-14 lg:py-[56px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }}>
@@ -137,7 +137,7 @@ export default function Index() {
       </section>
 
       <section className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-24 md:px-[50px] md:py-[140px] lg:px-[calc((100%-758px)/2)] lg:py-[162px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d429040f8f56f15156add247c32197f0314650d0?width=2880')" }}>
-        <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-sans text-[170px] font-bold leading-none text-black/10 sm:text-[240px] lg:text-[384px]">Shrout</div>
+        <img src={aboutAccent} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[120%] w-[110%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain opacity-70 sm:h-[125%] lg:h-[135%] lg:w-[842px]" />
         <div className="relative mx-auto flex max-w-[760px] flex-col gap-3">
           <header className="flex items-center justify-between border-b border-black pb-2"><h2 className="font-sans text-[38px] font-bold uppercase leading-none text-[#121212] sm:text-[54px]">About</h2><svg className="h-8 w-8" viewBox="0 0 43 41" fill="none"><path d="M4.18 10.99h33.95L21.16 39.42 4.18 10.99Z" stroke="black" strokeWidth="1.53" /></svg></header>
           <p className="font-sans text-[18px] leading-tight text-[#121212] sm:text-[20px] lg:text-[28px]"><strong>Anthony Shrout </strong>produces high-stakes live events and brand experiences where there’s no room for guesswork. For <strong>15+ years</strong>, he’s brought the creative judgment, technical command, and calm execution needed to make the moment work.</p>
@@ -150,7 +150,7 @@ export default function Index() {
       </section>
 
       <section className="relative flex min-h-[390px] items-center justify-center overflow-hidden bg-[#f4f4f2] px-6 py-20 text-white md:min-h-[470px] lg:min-h-[540px]">
-        <div className="absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 rounded-full bg-black bg-cover bg-center shadow-[0_20px_50px_rgba(0,0,0,.35)] sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }} />
+        <div className="absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 rounded-full bg-black bg-cover bg-center shadow-[0_20px_50px_rgba(0,0,0,.35)] sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" style={{ backgroundImage: `url('${noiseCircle}')` }} />
         <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border-[1.5px] border-white px-6 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">Get In Touch</button></div>
       </section>
 
