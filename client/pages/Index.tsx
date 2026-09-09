@@ -1,6 +1,6 @@
 const starAsset = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Ff35e5891ee674610a101c8bb2b597dff?format=webp&width=800&height=1200";
-const reelsAccentLeft = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F1d3690be565143f1b94b745b40f056f9?format=webp&width=800&height=1200";
-const reelsAccentRight = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fbefca5d7c9284f50ac19f67a0f009e4a?format=webp&width=800&height=1200";
+const reelsAccentLeft = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F0b8de29430b54e08b5b1367d3cb989db";
+const reelsAccentRight = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd50f2356ed234c60ab7407d662fb71d6";
 const aboutAccent = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F198d7198f1f24e57add9915f01a4575d?format=webp&width=800&height=1200";
 const noiseCircle = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F35a2232877f64b53928757221e7d26a0";
 
@@ -126,8 +126,8 @@ export default function Index() {
           </div>
           <button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white sm:px-10">Contact Me</button>
         </div>
-        <img src={reelsAccentLeft} alt="" aria-hidden="true" className="pointer-events-none absolute -left-10 top-[31%] hidden h-[430px] w-[565px] max-w-none object-contain lg:block lg:h-[520px] lg:w-[680px]" />
-        <img src={reelsAccentRight} alt="" aria-hidden="true" className="pointer-events-none absolute -right-10 top-[31%] hidden h-[430px] w-[565px] max-w-none object-contain lg:block lg:h-[520px] lg:w-[680px]" />
+        <img src={reelsAccentLeft} alt="" aria-hidden="true" className="pointer-events-none absolute -left-10 top-[31%] hidden h-[215px] w-[282.5px] max-w-none object-contain lg:block lg:h-[260px] lg:w-[340px]" />
+        <img src={reelsAccentRight} alt="" aria-hidden="true" className="pointer-events-none absolute -right-10 top-[31%] hidden h-[215px] w-[282.5px] max-w-none object-contain lg:block lg:h-[260px] lg:w-[340px]" />
       </section>
 
       <section className="relative overflow-hidden bg-black bg-cover bg-center bg-no-repeat px-6 py-10 text-white md:px-[66px] md:py-14 lg:py-[56px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }}>
