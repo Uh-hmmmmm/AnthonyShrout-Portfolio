@@ -99,10 +99,10 @@ export default function Index() {
       </div>
       </div>
 
-      <section className="relative flex w-full items-center overflow-hidden px-6 py-20 sm:px-10 md:px-[30px] md:py-[151px] lg:px-[291px] lg:py-[151px]">
+      <section className="relative flex w-full items-center overflow-hidden px-6 py-20 sm:px-10 md:px-[30px] md:py-[151px] lg:px-[30px] lg:py-[151px]">
         <div className="absolute inset-0 bg-[length:50px_50px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/872eb4421166530379c4a733827e95d380a961a8?width=2880')" }} />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative flex w-full max-w-[931px] flex-col items-start gap-6 border-l-[1.56px] border-white pl-4 md:flex-row md:items-end md:justify-between md:gap-10">
+        <div className="relative mx-auto flex w-full max-w-[931px] flex-col items-start gap-6 border-l-[1.56px] border-white pl-4 md:flex-row md:items-end md:justify-between md:gap-10">
           <div className="flex flex-col items-start gap-6 md:gap-[17px]">
             <p className="max-w-[418px] text-left text-[32px] font-normal uppercase leading-[0.95] text-white sm:max-w-[520px] md:max-w-[600px] lg:max-w-[700px] lg:text-[38px]">The space between a great <span className="font-bold">idea</span> and a great <span className="font-bold">production</span> is <span className="font-bold">experience</span>.</p>
             <button className="border-[1.5px] border-white px-5 py-[5px] font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">My Work</button>
