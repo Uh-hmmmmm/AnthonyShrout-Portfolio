@@ -93,9 +93,9 @@ export default function Index() {
       </section>
 
       <div className="relative z-10 flex w-full items-center justify-center overflow-hidden bg-transparent px-0 py-0">
-        <img className="hidden w-full max-w-[1061px] mix-blend-multiply lg:block" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fcb9254f802ec4e1d8ee70e659a07be0f" alt="Anthony" />
-        <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fcb9254f802ec4e1d8ee70e659a07be0f" alt="Anthony" />
-        <img className="w-full mix-blend-multiply md:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fcb9254f802ec4e1d8ee70e659a07be0f" alt="Anthony" />
+        <img className="hidden w-full max-w-[1061px] mix-blend-multiply lg:block" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd92a5cb556b54145abef37a4ce445ca2" alt="Anthony" />
+        <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd92a5cb556b54145abef37a4ce445ca2" alt="Anthony" />
+        <img className="w-full mix-blend-multiply md:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd92a5cb556b54145abef37a4ce445ca2" alt="Anthony" />
       </div>
       </div>
 
@@ -150,7 +150,7 @@ export default function Index() {
       </section>
 
       <section id="contact" className="relative flex min-h-[390px] scroll-mt-[63px] items-center justify-center overflow-hidden bg-[#f4f4f2] px-6 py-20 text-white md:min-h-[470px] lg:min-h-[540px]">
-        <div className="absolute inset-0 bg-[length:240px_240px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
+        <div className="absolute inset-0 bg-[length:720px_720px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
         <img src={noiseCircle} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 object-contain sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" />
         <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border-[1.5px] border-white px-6 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">Get In Touch</button></div>
       </section>
