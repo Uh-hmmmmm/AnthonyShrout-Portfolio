@@ -71,14 +71,14 @@ export default function Index() {
   return (
     <div className="w-full bg-white">
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[length:520px_520px] bg-repeat bg-center md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/8c8d3e86c4efb8706a348768ce3ae215de1ef15b?width=956')" }} />
-        <div className="absolute inset-0 hidden bg-[length:680px_680px] bg-repeat bg-center md:block lg:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e12e2662932d0343e4db502a0d06ed2861438bbd?width=1980')" }} />
-        <div className="absolute inset-0 hidden bg-[length:820px_820px] bg-repeat bg-center lg:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/41b62691ef2c321a21063596a97a25a905729b41?width=2880')" }} />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
+        <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block lg:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/2ff7542cfed34b54dc9af21d4b28ee166205a3f0?width=1980')" }} />
+        <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/bcd52d7c0f91205f7001557b4101e32c61ad2c2e?width=2880')" }} />
         <section className="relative z-10 flex min-h-[764px] w-full items-center justify-center overflow-hidden px-6 py-16 sm:px-10 md:min-h-[933px] md:px-[227px] md:py-24 lg:px-[451px] lg:py-[244px]">
         <div className="relative flex w-full max-w-[537px] flex-col items-start gap-4 border-l-2 border-black pl-4 md:gap-[17px] md:pl-4 lg:w-[537px] lg:max-w-none">
           <div className="relative flex h-[137px] w-full items-end overflow-hidden p-3 md:h-[213px] md:p-4 lg:w-[537px]">
-            <div className="absolute inset-0 bg-cover bg-center md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/9d522960d55a0d31b5abd019468d65f389a25ed0?width=862')" }} />
-            <div className="absolute inset-0 hidden md:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3789a5debe2851ff09d5f8b155ebd1dfadac505?width=1038')", backgroundSize: "169.432% 230.596%", backgroundPosition: "-130px -120px", backgroundRepeat: "no-repeat" }} />
+            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/9d522960d55a0d31b5abd019468d65f389a25ed0?width=862')" }} />
+            <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3789a5debe2851ff09d5f8b155ebd1dfadac505?width=1038')" }} />
             <span className="relative font-sans text-[26px] font-normal uppercase leading-none text-white">Anthony Shrout</span>
           </div>
           <div className="relative w-full lg:w-[519px]">
