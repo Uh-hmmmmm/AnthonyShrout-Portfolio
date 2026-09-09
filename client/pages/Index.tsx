@@ -2,8 +2,8 @@ function StarBurst({ className = "", tone = "light" }: { className?: string; ton
   const fill = tone === "light" ? "bg-[#d9d9d9]" : "bg-transparent border border-white";
   return (
     <div className={`relative ${className}`}>
-      <div className={`absolute left-0 top-0 h-[70%] w-[70%] rotate-45 ${fill}`} />
-      <div className={`absolute left-[15%] top-[15%] h-[70%] w-[70%] ${fill}`} />
+      <div className={`absolute left-0 top-0 h-[29px] w-[29px] rotate-45 ${fill}`} />
+      <div className={`absolute left-[6px] top-[6px] h-[29px] w-[29px] ${fill}`} />
     </div>
   );
 }
@@ -86,8 +86,8 @@ export default function Index() {
             <StarBurst className="pointer-events-none hidden h-[41px] w-[41px] md:absolute md:-right-1 md:bottom-2 md:block" />
           </div>
           <div className="flex w-full flex-col items-stretch gap-3 md:w-auto md:flex-row md:items-center md:gap-8">
-            <button className="border-[1.63px] border-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white lg:w-[225px]">My Work</button>
-            <button className="bg-black px-5 py-[5px] font-sans text-[20px] uppercase text-white transition-colors hover:bg-[#121212]/90 lg:w-[262px]">Get In Touch</button>
+            <button className="border-[1.5px] border-[#121212] px-5 py-[5px] font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white lg:w-[225px]">My Work</button>
+            <button className="bg-black px-5 py-[5px] font-sans text-[18px] uppercase text-white transition-colors hover:bg-[#121212]/90 lg:w-[262px]">Get In Touch</button>
           </div>
         </div>
       </section>
@@ -105,7 +105,7 @@ export default function Index() {
         <div className="relative flex w-full max-w-[931px] flex-col items-start gap-6 border-l-[1.56px] border-white pl-4 md:flex-row md:items-end md:justify-between md:gap-10">
           <div className="flex flex-col items-start gap-6 md:gap-[17px]">
             <p className="max-w-[418px] text-left text-[32px] font-normal uppercase leading-[0.95] text-white sm:max-w-[520px] md:max-w-[600px] lg:max-w-[700px] lg:text-[38px]">The space between a great <span className="font-bold">idea</span> and a great <span className="font-bold">production</span> is <span className="font-bold">experience</span>.</p>
-            <button className="border-[1.56px] border-white px-5 py-[5px] font-sans text-[20px] uppercase text-white transition-colors hover:bg-white hover:text-black">My Work</button>
+            <button className="border-[1.5px] border-white px-5 py-[5px] font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">My Work</button>
           </div>
           <div className="flex items-center gap-4"><StarBurst tone="dark" className="h-[30px] w-[30px]" /><TriangleIcon className="h-[24px] w-[32px]" /><CloverIcon className="h-[27px] w-[29px]" /></div>
         </div>
@@ -124,7 +124,7 @@ export default function Index() {
             <ReelCard title="Producer | Technical Director" image="https://api.builder.io/api/v1/image/assets/TEMP/59b8441dba9d7a319a74e6805fe20f4b4366cc2f?width=890" />
             <ReelCard title="Producer | Editor" image="https://api.builder.io/api/v1/image/assets/TEMP/45b1be1bd8e7abfcc897e9c67d67ae78737790fa?width=890" reverse />
           </div>
-          <button className="border border-[#121212] px-8 py-2 font-sans text-sm uppercase text-[#121212] sm:px-10 sm:text-lg">Contact Me</button>
+          <button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white sm:px-10">Contact Me</button>
         </div>
         <span className="pointer-events-none absolute -left-32 top-[40%] hidden font-serif text-[360px] leading-none text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.2)] lg:block">A</span>
         <span className="pointer-events-none absolute -right-32 top-[40%] hidden font-serif text-[360px] leading-none text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.2)] lg:block">S</span>
@@ -141,7 +141,7 @@ export default function Index() {
         <div className="relative mx-auto flex max-w-[760px] flex-col gap-3">
           <header className="flex items-center justify-between border-b border-black pb-2"><h2 className="font-sans text-[38px] font-bold uppercase leading-none text-[#121212] sm:text-[54px]">About</h2><svg className="h-8 w-8" viewBox="0 0 43 41" fill="none"><path d="M4.18 10.99h33.95L21.16 39.42 4.18 10.99Z" stroke="black" strokeWidth="1.53" /></svg></header>
           <p className="font-sans text-[18px] leading-tight text-[#121212] sm:text-[20px] lg:text-[28px]"><strong>Anthony Shrout </strong>produces high-stakes live events and brand experiences where there’s no room for guesswork. For <strong>15+ years</strong>, he’s brought the creative judgment, technical command, and calm execution needed to make the moment work.</p>
-          <div className="flex flex-col justify-end gap-3 pt-2 sm:flex-row"><button className="border border-[#121212] px-8 py-2 font-sans text-sm uppercase text-[#121212]">My Work</button><button className="bg-[#121212] px-8 py-2 font-sans text-sm uppercase text-white">Get In Touch</button></div>
+          <div className="flex flex-col justify-end gap-3 pt-2 sm:flex-row"><button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white">My Work</button><button className="bg-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-black">Get In Touch</button></div>
         </div>
       </section>
 
@@ -151,7 +151,7 @@ export default function Index() {
 
       <section className="relative flex min-h-[390px] items-center justify-center overflow-hidden bg-[#f4f4f2] px-6 py-20 text-white md:min-h-[470px] lg:min-h-[540px]">
         <div className="absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 rounded-full bg-black bg-cover bg-center shadow-[0_20px_50px_rgba(0,0,0,.35)] sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }} />
-        <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border border-white px-6 py-2 text-xs uppercase">Get In Touch</button></div>
+        <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border-[1.5px] border-white px-6 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">Get In Touch</button></div>
       </section>
 
       <footer className="border-y border-[#121212] bg-white px-6 py-8 text-[#121212] md:px-[62px] md:py-7 lg:px-[90px] lg:py-[42px]">
