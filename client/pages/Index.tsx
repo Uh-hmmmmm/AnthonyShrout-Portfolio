@@ -51,10 +51,11 @@ function ReelCard({ title, image, reverse = false }: { title: string; image: str
 export default function Index() {
   return (
     <div className="w-full bg-white">
-      <section className="relative flex min-h-[840px] w-full items-center justify-center overflow-hidden px-6 py-16 sm:px-10 md:min-h-[1103px] md:px-[227px] md:py-24 lg:px-[451px] lg:py-[244px]">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/8c8d3e86c4efb8706a348768ce3ae215de1ef15b?width=956')" }} />
-        <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block lg:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e12e2662932d0343e4db502a0d06ed2861438bbd?width=1980')" }} />
-        <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/41b62691ef2c321a21063596a97a25a905729b41?width=2880')" }} />
+      <div className="relative overflow-hidden bg-[length:50px_50px] bg-repeat">
+        <div className="absolute inset-0 bg-[length:50px_50px] bg-repeat md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/8c8d3e86c4efb8706a348768ce3ae215de1ef15b?width=956')" }} />
+        <div className="absolute inset-0 hidden bg-[length:50px_50px] bg-repeat md:block lg:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/e12e2662932d0343e4db502a0d06ed2861438bbd?width=1980')" }} />
+        <div className="absolute inset-0 hidden bg-[length:50px_50px] bg-repeat lg:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/41b62691ef2c321a21063596a97a25a905729b41?width=2880')" }} />
+        <section className="relative z-10 flex min-h-[764px] w-full items-center justify-center overflow-hidden px-6 py-16 sm:px-10 md:min-h-[933px] md:px-[227px] md:py-24 lg:px-[451px] lg:py-[244px]">
         <div className="relative flex w-full max-w-[537px] flex-col items-start gap-4 border-l-2 border-black pl-4 md:gap-[17px] md:pl-4">
           <div className="relative flex h-[137px] w-full items-end overflow-hidden p-3 md:h-[213px] md:p-4">
             <div className="absolute inset-0 bg-cover bg-center md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/9d522960d55a0d31b5abd019468d65f389a25ed0?width=862')" }} />
@@ -72,10 +73,11 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="flex w-full items-center justify-center overflow-hidden bg-white px-0 py-0">
+      <div className="relative z-10 flex w-full items-center justify-center overflow-hidden bg-transparent px-0 py-0">
         <img className="hidden w-full max-w-[1061px] mix-blend-multiply lg:block" src="https://api.builder.io/api/v1/image/assets/TEMP/a06e36637033d511049a90a8611ac7a31fe45ea6?width=2122" alt="Anthony" />
         <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src="https://api.builder.io/api/v1/image/assets/TEMP/2dcb3bc35e00e1890fcfb8b7758dfab29c2f9d9b?width=2120" alt="Anthony" />
         <img className="w-full mix-blend-multiply md:hidden" src="https://api.builder.io/api/v1/image/assets/TEMP/40d256d649bc487330cebfd53078ea7e4b846fd5?width=956" alt="Anthony" />
+      </div>
       </div>
 
       <section className="relative flex w-full items-center overflow-hidden px-6 py-20 sm:px-10 md:px-[30px] md:py-[151px] lg:px-[291px] lg:py-[151px]">
