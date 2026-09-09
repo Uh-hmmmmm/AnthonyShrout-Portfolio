@@ -126,8 +126,8 @@ export default function Index() {
           </div>
           <button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white sm:px-10">Contact Me</button>
         </div>
-        <img src={reelsAccentLeft} alt="" aria-hidden="true" className="pointer-events-none absolute -left-32 top-[28%] hidden h-[603px] w-[793px] max-w-none object-contain lg:block lg:h-[680px] lg:w-[894px]" />
-        <img src={reelsAccentRight} alt="" aria-hidden="true" className="pointer-events-none absolute -right-32 top-[28%] hidden h-[603px] w-[793px] max-w-none object-contain lg:block lg:h-[680px] lg:w-[894px]" />
+        <img src={reelsAccentLeft} alt="" aria-hidden="true" className="pointer-events-none absolute -left-10 top-[31%] hidden h-[430px] w-[565px] max-w-none object-contain lg:block lg:h-[520px] lg:w-[680px]" />
+        <img src={reelsAccentRight} alt="" aria-hidden="true" className="pointer-events-none absolute -right-10 top-[31%] hidden h-[430px] w-[565px] max-w-none object-contain lg:block lg:h-[520px] lg:w-[680px]" />
       </section>
 
       <section className="relative overflow-hidden bg-black bg-cover bg-center bg-no-repeat px-6 py-10 text-white md:px-[66px] md:py-14 lg:py-[56px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }}>
@@ -150,7 +150,7 @@ export default function Index() {
       </section>
 
       <section className="relative flex min-h-[390px] items-center justify-center overflow-hidden bg-[#f4f4f2] px-6 py-20 text-white md:min-h-[470px] lg:min-h-[540px]">
-        <div className="absolute inset-0 bg-[length:36px_36px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }} />
+        <div className="absolute inset-0 bg-[length:100px_100px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
         <img src={noiseCircle} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 object-contain sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" />
         <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border-[1.5px] border-white px-6 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">Get In Touch</button></div>
       </section>
