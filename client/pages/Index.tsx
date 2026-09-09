@@ -93,9 +93,9 @@ export default function Index() {
       </section>
 
       <div className="relative z-10 flex w-full items-center justify-center overflow-hidden bg-transparent px-0 py-0">
-        <img className="hidden w-full max-w-[1061px] mix-blend-multiply lg:block" src="https://api.builder.io/api/v1/image/assets/TEMP/a06e36637033d511049a90a8611ac7a31fe45ea6?width=2122" alt="Anthony" />
-        <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src="https://api.builder.io/api/v1/image/assets/TEMP/2dcb3bc35e00e1890fcfb8b7758dfab29c2f9d9b?width=2120" alt="Anthony" />
-        <img className="w-full mix-blend-multiply md:hidden" src="https://api.builder.io/api/v1/image/assets/TEMP/40d256d649bc487330cebfd53078ea7e4b846fd5?width=956" alt="Anthony" />
+        <img className="hidden w-full max-w-[1061px] mix-blend-multiply lg:block" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fcb9254f802ec4e1d8ee70e659a07be0f" alt="Anthony" />
+        <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fcb9254f802ec4e1d8ee70e659a07be0f" alt="Anthony" />
+        <img className="w-full mix-blend-multiply md:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fcb9254f802ec4e1d8ee70e659a07be0f" alt="Anthony" />
       </div>
       </div>
 
