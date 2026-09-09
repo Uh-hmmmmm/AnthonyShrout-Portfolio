@@ -48,6 +48,25 @@ function ReelCard({ title, image, reverse = false }: { title: string; image: str
   );
 }
 
+const logoSources = [
+  "https://api.builder.io/api/v1/image/assets/TEMP/1bbca1ac6708ff5a38af946baaa0a25369680091?width=286",
+  "https://api.builder.io/api/v1/image/assets/TEMP/57fc53e60fc0699f4bc4e8a28148562af36abb79?width=284",
+  "https://api.builder.io/api/v1/image/assets/TEMP/2809c91bbc77e28edf8f408b10bb733ffda48fc5?width=286",
+  "https://api.builder.io/api/v1/image/assets/TEMP/74a2ad2c9e811e1ec4468fbfe68950c764ecb289?width=286",
+  "https://api.builder.io/api/v1/image/assets/TEMP/5dbabffdfe91ba392764d797c7d2f9625c429bb0?width=286",
+  "https://api.builder.io/api/v1/image/assets/TEMP/2a64437c9be706c50773da974ed898eff98665d5?width=286",
+  "https://api.builder.io/api/v1/image/assets/TEMP/a63cb7a2a0de6cb60919b89719e60231ac0f9c0f?width=284",
+  "https://api.builder.io/api/v1/image/assets/TEMP/1bbca1ac6708ff5a38af946baaa0a25369680091?width=286",
+];
+
+function Stat({ value, children }: { value: string; children: string }) {
+  return <div className="flex min-h-[116px] flex-1 flex-col items-center justify-center px-4 text-center text-white md:min-h-0 md:px-3"><strong className="font-sans text-[42px] font-bold uppercase leading-none md:text-[36px] lg:text-[60px]">{value}</strong><span className="max-w-[265px] text-[18px] leading-tight md:text-[16px] lg:text-[26px]">{children}</span></div>;
+}
+
+function Socials() {
+  return <div className="flex items-center gap-3"><span aria-label="Twitter" className="text-sm">𝕏</span><span aria-label="Instagram" className="text-sm">◎</span><span aria-label="LinkedIn" className="text-sm">in</span></div>;
+}
+
 export default function Index() {
   return (
     <div className="w-full bg-white">
@@ -110,6 +129,34 @@ export default function Index() {
         <span className="pointer-events-none absolute -left-32 top-[40%] hidden font-serif text-[360px] leading-none text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.2)] lg:block">A</span>
         <span className="pointer-events-none absolute -right-32 top-[40%] hidden font-serif text-[360px] leading-none text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.2)] lg:block">S</span>
       </section>
+
+      <section className="relative overflow-hidden bg-black bg-cover bg-center bg-no-repeat px-6 py-10 text-white md:px-[66px] md:py-14 lg:py-[56px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }}>
+        <div className="mx-auto flex max-w-[1308px] flex-col divide-y divide-white/70 md:flex-row md:divide-x md:divide-y-0">
+          <Stat value="15+">Years in Cooperate &amp; Event Production</Stat><Stat value="50+">Brand Campaign Projects</Stat><Stat value="National">Broadcast &amp; Live Event Credits</Stat>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-24 md:px-[50px] md:py-[140px] lg:px-[calc((100%-758px)/2)] lg:py-[162px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d429040f8f56f15156add247c32197f0314650d0?width=2880')" }}>
+        <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-sans text-[170px] font-bold leading-none text-black/10 sm:text-[240px] lg:text-[384px]">Shrout</div>
+        <div className="relative mx-auto flex max-w-[760px] flex-col gap-3">
+          <header className="flex items-center justify-between border-b border-black pb-2"><h2 className="font-sans text-[38px] font-bold uppercase leading-none text-[#121212] sm:text-[54px]">About</h2><svg className="h-8 w-8" viewBox="0 0 43 41" fill="none"><path d="M4.18 10.99h33.95L21.16 39.42 4.18 10.99Z" stroke="black" strokeWidth="1.53" /></svg></header>
+          <p className="font-sans text-[18px] leading-tight text-[#121212] sm:text-[20px] lg:text-[28px]"><strong>Anthony Shrout </strong>produces high-stakes live events and brand experiences where there’s no room for guesswork. For <strong>15+ years</strong>, he’s brought the creative judgment, technical command, and calm execution needed to make the moment work.</p>
+          <div className="flex flex-col justify-end gap-3 pt-2 sm:flex-row"><button className="border border-[#121212] px-8 py-2 font-sans text-sm uppercase text-[#121212]">My Work</button><button className="bg-[#121212] px-8 py-2 font-sans text-sm uppercase text-white">Get In Touch</button></div>
+        </div>
+      </section>
+
+      <section className="bg-cover bg-center bg-no-repeat px-6 py-8 md:px-[116px] md:py-9 lg:px-[22px] lg:py-12" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/1db5c1281cd10f5d86e598ed74fa6465af1a76a9?width=2880')" }}>
+        <div className="mx-auto grid max-w-[1396px] grid-cols-2 items-center gap-3 md:grid-cols-4 lg:flex lg:justify-between lg:gap-4">{logoSources.map((src, index) => <img key={src + index} src={src} alt="Client logo" className="h-24 w-full object-contain md:h-32 lg:h-[107px] lg:w-[143px]" />)}</div>
+      </section>
+
+      <section className="relative flex min-h-[390px] items-center justify-center overflow-hidden bg-[#f4f4f2] px-6 py-20 text-white md:min-h-[470px] lg:min-h-[540px]">
+        <div className="absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 rounded-full bg-black bg-cover bg-center shadow-[0_20px_50px_rgba(0,0,0,.35)] sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }} />
+        <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border border-white px-6 py-2 text-xs uppercase">Get In Touch</button></div>
+      </section>
+
+      <footer className="border-y border-[#121212] bg-white px-6 py-8 text-[#121212] md:px-[62px] md:py-7 lg:px-[90px] lg:py-[42px]">
+        <div className="flex flex-col gap-5"><div className="flex flex-col items-center gap-5 md:flex-row md:justify-between"><strong className="font-sans text-2xl font-black uppercase tracking-wide lg:text-4xl">Anthony Shrout</strong><nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[11px] font-medium"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="#privacy">Privacy</a></nav><Socials /></div><div className="border-t border-[#121212]" /><div className="flex flex-col items-center gap-1 text-[10px] md:flex-row md:justify-between"><span>© 2026 Company. All rights reserved.</span><span>Trusted with the moment</span></div></div>
+      </footer>
     </div>
   );
 }
