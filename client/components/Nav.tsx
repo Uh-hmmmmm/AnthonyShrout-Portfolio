@@ -46,7 +46,7 @@ export default function Nav() {
         </a>
         <nav className="hidden items-center gap-10 md:flex lg:gap-[65px]" aria-label="Main navigation">
           {links.map((link) => <a key={link.href} href={link.href} className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">{link.label}</a>)}
-          <a href="#contact" className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-white transition-colors hover:opacity-80 ${isScrolled ? "bg-white text-black" : ""}`}>Contact</a>
+          <a href="#contact" className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:opacity-80 ${isScrolled ? "bg-white" : "text-white"}`}>Contact</a>
         </nav>
         <button
           type="button"
