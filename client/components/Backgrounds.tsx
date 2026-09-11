@@ -25,7 +25,7 @@ export function GrainBackground({
       {...rest}
       style={{
         backgroundImage: `url('${grainAssets[tone]}')`,
-        backgroundSize: "38px 38px",
+        backgroundSize: tone === "white" ? "190px 190px" : "38px 38px",
         ...style,
       }}
     >
