@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import PreFooter from "@/components/PreFooter";
+import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 
 const starAsset = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Ff35e5891ee674610a101c8bb2b597dff?format=webp&width=800&height=1200";
 const reelsAccentLeft = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F0b8de29430b54e08b5b1367d3cb989db";
@@ -68,10 +69,7 @@ function Stat({ value, children }: { value: string; children: string }) {
 export default function Index() {
   return (
     <div id="top" className="w-full bg-white">
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
-        <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block lg:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/2ff7542cfed34b54dc9af21d4b28ee166205a3f0?width=1980')" }} />
-        <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/bcd52d7c0f91205f7001557b4101e32c61ad2c2e?width=2880')" }} />
+      <WhiteGrainBackground className="w-full">
         <section className="relative z-10 flex min-h-[764px] w-full items-center justify-center overflow-hidden px-6 py-16 sm:px-10 md:min-h-[933px] md:px-[227px] md:py-24 lg:px-[451px] lg:py-[244px]">
         <div className="relative flex w-full max-w-[537px] flex-col items-start gap-4 border-l-2 border-black pl-4 md:gap-[17px] md:pl-4 lg:w-[537px] lg:max-w-none">
           <div className="relative flex h-[137px] w-full items-end overflow-hidden p-3 md:h-[213px] md:p-4 lg:w-[537px]">
@@ -95,11 +93,11 @@ export default function Index() {
         <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd92a5cb556b54145abef37a4ce445ca2" alt="Anthony" />
         <img className="w-full mix-blend-multiply md:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd92a5cb556b54145abef37a4ce445ca2" alt="Anthony" />
       </div>
-      </div>
+      </WhiteGrainBackground>
 
-      <section id="services" className="relative flex w-full items-center overflow-hidden px-6 py-20 sm:px-10 md:px-[30px] md:py-[151px] lg:px-[30px] lg:py-[151px]">
-        <div className="absolute inset-0 bg-[length:50px_50px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/872eb4421166530379c4a733827e95d380a961a8?width=2880')" }} />
-        <div className="absolute inset-0 bg-black/60" />
+      <BlackGrainBackground id="services" className="flex w-full items-center px-6 py-20 sm:px-10 md:px-[30px] md:py-[151px] lg:px-[30px] lg:py-[151px]">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/872eb4421166530379c4a733827e95d380a961a8?width=2880')" }} />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative mx-auto flex w-full max-w-[931px] flex-col items-start gap-6 border-l-[1.56px] border-white pl-4 md:flex-row md:items-end md:justify-between md:gap-10">
           <div className="flex flex-col items-start gap-6 md:gap-[17px]">
             <p className="max-w-[418px] text-left text-[32px] font-normal uppercase leading-[0.95] text-white sm:max-w-[520px] md:max-w-[600px] lg:max-w-[700px] lg:text-[38px]">The space between a great <span className="font-bold">idea</span> and a great <span className="font-bold">production</span> is <span className="font-bold">experience</span>.</p>
@@ -107,12 +105,9 @@ export default function Index() {
           </div>
           <div className="flex items-center gap-4"><StarBurst className="h-[30px] w-[30px]" /><TriangleIcon className="h-[24px] w-[32px]" /><CloverIcon className="h-[27px] w-[29px]" /></div>
         </div>
-      </section>
+      </BlackGrainBackground>
 
-      <section className="relative min-h-[900px] overflow-hidden px-2 py-16 sm:px-10 md:min-h-[1100px] md:px-[94px] lg:min-h-[1278px] lg:px-[94px] lg:py-16 2xl:px-[346px]">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
-        <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block lg:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/2ff7542cfed34b54dc9af21d4b28ee166205a3f0?width=1980')" }} />
-        <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/bcd52d7c0f91205f7001557b4101e32c61ad2c2e?width=2880')" }} />
+      <WhiteGrainBackground className="min-h-[900px] px-2 py-16 sm:px-10 md:min-h-[1100px] md:px-[94px] lg:min-h-[1278px] lg:px-[94px] lg:py-16 2xl:px-[346px]">
         <div className="relative mx-auto flex w-full max-w-[748px] flex-col items-center gap-11 md:max-w-[748px] lg:max-w-[748px] 2xl:max-w-[1100px]">
           <header className="flex w-full items-end justify-between border-b-[3px] border-black pb-3">
             <ReelsMark />
@@ -126,26 +121,27 @@ export default function Index() {
         </div>
         <img src={reelsAccentLeft} alt="" aria-hidden="true" className="pointer-events-none absolute -left-10 top-[31%] hidden h-[215px] w-[282.5px] max-w-none object-contain lg:block lg:h-[260px] lg:w-[340px]" />
         <img src={reelsAccentRight} alt="" aria-hidden="true" className="pointer-events-none absolute -right-10 top-[31%] hidden h-[215px] w-[282.5px] max-w-none object-contain lg:block lg:h-[260px] lg:w-[340px]" />
-      </section>
+      </WhiteGrainBackground>
 
-      <section className="relative overflow-hidden bg-black bg-cover bg-center bg-no-repeat px-6 py-10 text-white md:px-[66px] md:py-14 lg:py-[56px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }}>
-        <div className="mx-auto flex max-w-[1308px] flex-col divide-y divide-white/70 md:flex-row md:divide-x md:divide-y-0">
+      <BlackGrainBackground className="px-6 py-10 md:px-[66px] md:py-14 lg:py-[56px]">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }} />
+        <div className="relative mx-auto flex max-w-[1308px] flex-col divide-y divide-white/70 md:flex-row md:divide-x md:divide-y-0">
           <Stat value="15+">Years in Cooperate &amp; Event Production</Stat><Stat value="50+">Brand Campaign Projects</Stat><Stat value="National">Broadcast &amp; Live Event Credits</Stat>
         </div>
-      </section>
+      </BlackGrainBackground>
 
-      <section id="about" className="relative scroll-mt-[63px] overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-24 md:px-[50px] md:py-[140px] lg:px-[calc((100%-758px)/2)] lg:py-[162px]" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d429040f8f56f15156add247c32197f0314650d0?width=2880')" }}>
+      <WhiteGrainBackground id="about" className="scroll-mt-[63px] px-6 py-24 md:px-[50px] md:py-[140px] lg:px-[calc((100%-758px)/2)] lg:py-[162px]">
         <img src={aboutAccent} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[120%] w-[110%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain opacity-70 sm:h-[125%] lg:h-[135%] lg:w-[842px]" />
         <div className="relative mx-auto flex max-w-[760px] flex-col gap-3">
           <header className="flex items-center justify-between border-b border-black pb-2"><h2 className="font-sans text-[38px] font-bold uppercase leading-none text-[#121212] sm:text-[54px]">About</h2><svg className="h-8 w-8" viewBox="0 0 43 41" fill="none"><path d="M4.18 10.99h33.95L21.16 39.42 4.18 10.99Z" stroke="black" strokeWidth="1.53" /></svg></header>
           <p className="font-sans text-[18px] leading-tight text-[#121212] sm:text-[20px] lg:text-[28px]"><strong>Anthony Shrout </strong>produces high-stakes live events and brand experiences where there’s no room for guesswork. For <strong>15+ years</strong>, he’s brought the creative judgment, technical command, and calm execution needed to make the moment work.</p>
           <div className="flex flex-col justify-end gap-3 pt-2 sm:flex-row"><button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white">My Work</button><button className="bg-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-black">Get In Touch</button></div>
         </div>
-      </section>
+      </WhiteGrainBackground>
 
-      <section className="bg-cover bg-center bg-no-repeat px-6 py-8 md:px-[116px] md:py-9 lg:px-[22px] lg:py-12" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/1db5c1281cd10f5d86e598ed74fa6465af1a76a9?width=2880')" }}>
+      <WhiteGrainBackground className="px-6 py-8 md:px-[116px] md:py-9 lg:px-[22px] lg:py-12">
         <div className="mx-auto grid max-w-[1396px] grid-cols-2 items-center gap-3 md:grid-cols-4 lg:flex lg:justify-between lg:gap-4">{logoSources.map((src, index) => <img key={src + index} src={src} alt="Client logo" className="h-24 w-full object-contain md:h-32 lg:h-[107px] lg:w-[143px]" />)}</div>
-      </section>
+      </WhiteGrainBackground>
 
       <PreFooter />
 

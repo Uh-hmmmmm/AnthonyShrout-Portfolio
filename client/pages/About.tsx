@@ -2,24 +2,6 @@ import Footer from "@/components/Footer";
 import PreFooter from "@/components/PreFooter";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 
-const heroBg = {
-  mobile:
-    "https://api.builder.io/api/v1/image/assets/TEMP/b5c82557953a2038c6a3150ee3e7c1e5cfd10bba?width=956",
-  tablet:
-    "https://api.builder.io/api/v1/image/assets/TEMP/c62e4b96ef3cba86b2ea1821362061efede6f81d?width=1982",
-  desktop:
-    "https://api.builder.io/api/v1/image/assets/TEMP/987e9b9ce91048da5a1bac5832b241647bad6670?width=2880",
-};
-
-const introBg = {
-  mobile:
-    "https://api.builder.io/api/v1/image/assets/TEMP/e4bfbe24b213a595c9e38e6f276eda4807b5e424?width=956",
-  tablet:
-    "https://api.builder.io/api/v1/image/assets/TEMP/c7acb2104d5dd7ce8e11a4ec9ce8309854e43706?width=1982",
-  desktop:
-    "https://api.builder.io/api/v1/image/assets/TEMP/c7b7e2ecc34bff07645d20e66c58d99a96a99ca2?width=2880",
-};
-
 const handlingBg =
   "https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956";
 
@@ -139,24 +121,6 @@ const goods = [
   },
 ];
 
-function ResponsiveBg(props: {
-  mobile: string;
-  tablet: string;
-  desktop: string;
-  size?: string;
-}) {
-  const bgClass = props.size
-    ? "bg-[length:" + props.size + "] bg-repeat"
-    : "bg-cover bg-center bg-no-repeat";
-  return (
-    <>
-      <div className={"absolute inset-0 md:hidden " + bgClass} style={{ backgroundImage: "url('" + props.mobile + "')" }} />
-      <div className={"absolute inset-0 hidden md:block lg:hidden " + bgClass} style={{ backgroundImage: "url('" + props.tablet + "')" }} />
-      <div className={"absolute inset-0 hidden lg:block " + bgClass} style={{ backgroundImage: "url('" + props.desktop + "')" }} />
-    </>
-  );
-}
-
 function OutlineButton({ children }: { children: string }) {
   return (
     <button className="border-[1.5px] border-white px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">
@@ -168,8 +132,7 @@ function OutlineButton({ children }: { children: string }) {
 export default function About() {
   return (
     <div className="w-full bg-white">
-      <section className="relative flex min-h-[500px] w-full flex-col items-center justify-end overflow-hidden px-6 pb-16 pt-32 sm:min-h-[600px] sm:pb-20 md:min-h-[728px] md:pb-24 lg:pb-28">
-        <ResponsiveBg mobile={heroBg.mobile} tablet={heroBg.tablet} desktop={heroBg.desktop} />
+      <WhiteGrainBackground className="flex min-h-[500px] w-full flex-col items-center justify-end px-6 pb-16 pt-32 sm:min-h-[600px] sm:pb-20 md:min-h-[728px] md:pb-24 lg:pb-28">
         <div className="relative z-10 flex flex-col items-center gap-6 text-center">
           <p className="font-sans text-[16px] font-bold uppercase text-black sm:text-[20px] lg:text-[26px]">
             The producer behind the production
@@ -179,11 +142,9 @@ export default function About() {
             bout
           </h1>
         </div>
-      </section>
+      </WhiteGrainBackground>
 
-      <section className="relative flex w-full flex-col items-center gap-12 overflow-hidden px-6 py-20 sm:px-10 md:py-28 lg:flex-row lg:items-start lg:justify-center lg:gap-6 lg:px-14 lg:py-32">
-        <ResponsiveBg mobile={introBg.mobile} tablet={introBg.tablet} desktop={introBg.desktop} />
-
+      <BlackGrainBackground className="flex w-full flex-col items-center gap-12 px-6 py-20 sm:px-10 md:py-28 lg:flex-row lg:items-start lg:justify-center lg:gap-6 lg:px-14 lg:py-32">
         <div className="relative order-2 flex flex-col items-center gap-3 text-center lg:order-1 lg:w-[300px] lg:items-end lg:gap-3 lg:border-r-2 lg:border-white lg:pr-5 lg:text-right">
           {callouts.map((item) => (
             <span key={item} className="font-sans text-[16px] uppercase text-white sm:text-[20px] lg:text-[22px]">
@@ -205,7 +166,7 @@ export default function About() {
             <OutlineButton>Get In Touch</OutlineButton>
           </div>
         </div>
-      </section>
+      </BlackGrainBackground>
 
       <WhiteGrainBackground className="flex w-full flex-col items-center gap-16 px-6 py-20 sm:px-10 md:py-28 lg:py-36">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: `url('${handlingBg}')` }} />
@@ -264,10 +225,8 @@ export default function About() {
         </div>
       </WhiteGrainBackground>
 
-      <section
-        className="relative flex w-full items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-14 text-center sm:px-10"
-        style={{ backgroundImage: `url('${creditsBg}')` }}
-      >
+      <BlackGrainBackground className="flex w-full items-center justify-center px-6 py-14 text-center sm:px-10">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: `url('${creditsBg}')` }} />
         <div className="relative flex flex-col items-center gap-3 text-white">
           <p className="font-sans text-[14px] uppercase tracking-[0.2em] sm:text-[16px]">Broadcasting Credits</p>
           <p className="font-sans text-[24px] font-bold uppercase leading-tight sm:text-[32px] lg:text-[38px]">
@@ -278,7 +237,7 @@ export default function About() {
             · NEP Broadcasting ·
           </p>
         </div>
-      </section>
+      </BlackGrainBackground>
 
       <PreFooter />
 
