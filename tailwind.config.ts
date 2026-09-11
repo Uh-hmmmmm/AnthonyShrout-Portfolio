@@ -15,6 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Arimo", "-apple-system", "Roboto", "Helvetica", "sans-serif"],
+        display: ["Anton", "Arimo", "sans-serif"],
+        blackletter: ["UnifrakturMaguntia", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",

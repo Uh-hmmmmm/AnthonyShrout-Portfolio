@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+
 const starAsset = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Ff35e5891ee674610a101c8bb2b597dff?format=webp&width=800&height=1200";
 const reelsAccentLeft = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F0b8de29430b54e08b5b1367d3cb989db";
 const reelsAccentRight = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd50f2356ed234c60ab7407d662fb71d6";
@@ -63,9 +65,6 @@ function Stat({ value, children }: { value: string; children: string }) {
   return <div className="flex min-h-[116px] flex-1 flex-col items-center justify-center px-4 text-center text-white md:min-h-0 md:px-3"><strong className="font-sans text-[42px] font-bold uppercase leading-none md:text-[36px] lg:text-[60px]">{value}</strong><span className="max-w-[265px] text-[18px] leading-tight md:text-[16px] lg:text-[26px]">{children}</span></div>;
 }
 
-function Socials() {
-  return <div className="flex items-center gap-3"><span aria-label="Twitter" className="text-sm">𝕏</span><span aria-label="Instagram" className="text-sm">◎</span><span aria-label="LinkedIn" className="text-sm">in</span></div>;
-}
 
 export default function Index() {
   return (
@@ -155,9 +154,7 @@ export default function Index() {
         <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border-[1.5px] border-white px-6 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">Get In Touch</button></div>
       </section>
 
-      <footer className="border-y border-[#121212] bg-white px-6 py-8 text-[#121212] md:px-[62px] md:py-7 lg:px-[90px] lg:py-[42px]">
-        <div className="flex flex-col gap-5"><div className="flex flex-col items-center gap-5 md:flex-row md:justify-between"><strong className="font-sans text-2xl font-black uppercase tracking-wide lg:text-4xl">Anthony Shrout</strong><nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[11px] font-medium"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="#privacy">Privacy</a></nav><Socials /></div><div className="border-t border-[#121212]" /><div className="flex flex-col items-center gap-1 text-[10px] md:flex-row md:justify-between"><span>© 2026 Company. All rights reserved.</span><span>Trusted with the moment</span></div></div>
-      </footer>
+      <Footer />
     </div>
   );
 }

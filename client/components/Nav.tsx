@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-
-const links = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-];
+import { Link, useLocation } from "react-router-dom";
 
 function Logo() {
   return (
@@ -25,6 +21,8 @@ function Logo() {
 }
 
 export default function Nav() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,18 +33,20 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", updateScrollState);
   }, []);
 
+  const sectionHref = (id: string) => (isHome ? "#" + id : "/#" + id);
   const closeMenu = () => setIsMenuOpen(false);
   const theme = isScrolled ? "bg-black text-white" : "bg-transparent text-[#121212]";
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 border-b-2 transition-colors duration-300 ${theme} ${isScrolled ? "border-white" : "border-[#121212]"}`}>
       <div className="flex h-[63px] items-center justify-between px-[17px] sm:px-6 md:px-[30px] lg:px-[17px]">
-        <a href="#top" aria-label="Home" onClick={closeMenu}>
+        <Link to="/" aria-label="Home" onClick={closeMenu}>
           <Logo />
-        </a>
+        </Link>
         <nav className="hidden items-center gap-10 md:flex lg:gap-[65px]" aria-label="Main navigation">
-          {links.map((link) => <a key={link.href} href={link.href} className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">{link.label}</a>)}
-          <a href="#contact" className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:opacity-80 ${isScrolled ? "bg-white" : "text-white"}`}>Contact</a>
+          <Link to="/about" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">About</Link>
+          <a href={sectionHref("services")} className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">Services</a>
+          <a href={sectionHref("contact")} className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:opacity-80 ${isScrolled ? "bg-white" : "text-white"}`}>Contact</a>
         </nav>
         <button
           type="button"
@@ -62,8 +62,9 @@ export default function Nav() {
       </div>
       {isMenuOpen && (
         <nav className={`border-t border-current px-6 py-4 md:hidden ${isScrolled ? "bg-black" : "bg-black/90 text-white"}`} aria-label="Mobile navigation">
-          {links.map((link) => <a key={link.href} href={link.href} onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">{link.label}</a>)}
-          <a href="#contact" onClick={closeMenu} className="block py-4 font-sans text-xl uppercase">Contact</a>
+          <Link to="/about" onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">About</Link>
+          <a href={sectionHref("services")} onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">Services</a>
+          <a href={sectionHref("contact")} onClick={closeMenu} className="block py-4 font-sans text-xl uppercase">Contact</a>
         </nav>
       )}
     </header>
