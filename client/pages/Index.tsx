@@ -111,11 +111,11 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="relative min-h-[900px] overflow-hidden px-2 py-16 sm:px-10 md:min-h-[1100px] md:px-[94px] lg:min-h-[1278px] lg:px-[346px] lg:py-16">
+      <section className="relative min-h-[900px] overflow-hidden px-2 py-16 sm:px-10 md:min-h-[1100px] md:px-[94px] lg:min-h-[1278px] lg:px-[94px] lg:py-16 2xl:px-[346px]">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
         <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block lg:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/2ff7542cfed34b54dc9af21d4b28ee166205a3f0?width=1980')" }} />
         <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat lg:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/bcd52d7c0f91205f7001557b4101e32c61ad2c2e?width=2880')" }} />
-        <div className="relative mx-auto flex w-full max-w-[748px] flex-col items-center gap-11 md:max-w-none lg:max-w-[1100px]">
+        <div className="relative mx-auto flex w-full max-w-[748px] flex-col items-center gap-11 md:max-w-[748px] lg:max-w-[748px] 2xl:max-w-[1100px]">
           <header className="flex w-full items-end justify-between border-b-[3px] border-black pb-3">
             <ReelsMark />
             <h2 className="font-sans text-[38px] font-bold uppercase leading-none text-[#121212] sm:text-[53px]">REELS</h2>
