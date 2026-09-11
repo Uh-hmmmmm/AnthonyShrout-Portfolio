@@ -139,9 +139,9 @@ export default function Index() {
         </div>
       </WhiteGrainBackground>
 
-      <WhiteGrainBackground className="px-6 py-8 md:px-[116px] md:py-9 lg:px-[22px] lg:py-12">
+      <BlackGrainBackground className="px-6 py-8 md:px-[116px] md:py-9 lg:px-[22px] lg:py-12">
         <div className="mx-auto grid max-w-[1396px] grid-cols-2 items-center gap-3 md:grid-cols-4 lg:flex lg:justify-between lg:gap-4">{logoSources.map((src, index) => <img key={src + index} src={src} alt="Client logo" className="h-24 w-full object-contain md:h-32 lg:h-[107px] lg:w-[143px]" />)}</div>
-      </WhiteGrainBackground>
+      </BlackGrainBackground>
 
       <PreFooter />
 

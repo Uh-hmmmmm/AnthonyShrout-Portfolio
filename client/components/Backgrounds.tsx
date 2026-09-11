@@ -21,10 +21,11 @@ export function GrainBackground({
 } & HTMLAttributes<HTMLElement>) {
   return (
     <section
-      className={`relative overflow-hidden bg-cover bg-center bg-no-repeat ${tone === "black" ? "bg-black text-white" : "bg-white text-[#121212]"} ${className}`}
+      className={`relative overflow-hidden bg-center bg-repeat ${tone === "black" ? "bg-black text-white" : "bg-white text-[#121212]"} ${className}`}
       {...rest}
       style={{
         backgroundImage: `url('${grainAssets[tone]}')`,
+        backgroundSize: "38px 38px",
         ...style,
       }}
     >
