@@ -1,4 +1,6 @@
 import Footer from "@/components/Footer";
+import PreFooter from "@/components/PreFooter";
+import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 
 const heroBg = {
   mobile:
@@ -41,18 +43,6 @@ const goodsBg = {
 
 const creditsBg =
   "https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880";
-
-const preFooterPattern = {
-  mobile:
-    "https://api.builder.io/api/v1/image/assets/TEMP/8954823300f0014a9d4fa6f19176f338ae6eecb3?width=956",
-  tablet:
-    "https://api.builder.io/api/v1/image/assets/TEMP/1c6ffc0b5a5a69846acf729e64a5c8487a6d24b4?width=1982",
-  desktop:
-    "https://api.builder.io/api/v1/image/assets/TEMP/da6c1227425966baf9f53474b83cb3d2b32b5874?width=2880",
-};
-
-const preFooterShape =
-  "https://api.builder.io/api/v1/image/assets/TEMP/822b6d8bb3d3a8701adc982e870527ef243ff8b5?width=2975";
 
 function OnLocationIcon({ className = "" }: { className?: string }) {
   return (
@@ -184,7 +174,7 @@ export default function About() {
           <p className="font-sans text-[16px] font-bold uppercase text-black sm:text-[20px] lg:text-[26px]">
             The producer behind the production
           </p>
-          <h1 className="flex items-center font-display text-[70px] uppercase leading-none text-transparent [-webkit-text-stroke:1.5px_black] sm:text-[130px] lg:[-webkit-text-stroke:2px_black] lg:text-[220px]">
+          <h1 className="flex items-center font-about text-[70px] uppercase leading-none text-transparent [-webkit-text-stroke:1.5px_black] sm:text-[130px] lg:[-webkit-text-stroke:2px_black] lg:text-[220px]">
             <span className="font-blackletter normal-case text-black [-webkit-text-fill-color:black] [-webkit-text-stroke:0]">A</span>
             bout
           </h1>
@@ -217,10 +207,8 @@ export default function About() {
         </div>
       </section>
 
-      <section
-        className="relative flex w-full flex-col items-center gap-16 overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-20 sm:px-10 md:py-28 lg:py-36"
-        style={{ backgroundImage: `url('${handlingBg}')` }}
-      >
+      <WhiteGrainBackground className="flex w-full flex-col items-center gap-16 px-6 py-20 sm:px-10 md:py-28 lg:py-36">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: `url('${handlingBg}')` }} />
         <div className="relative flex max-w-[700px] flex-col items-center gap-4 text-center">
           <h2 className="font-sans text-[36px] font-normal uppercase leading-none text-[#121212] sm:text-[46px] lg:text-[50px]">
             <strong className="font-bold">Handling</strong> the hard parts
@@ -241,17 +229,17 @@ export default function About() {
             </div>
           ))}
         </div>
-      </section>
+      </WhiteGrainBackground>
 
-      <section className="relative flex w-full items-center justify-center overflow-hidden px-6 py-20 sm:px-14 md:py-28 lg:py-32">
-        <ResponsiveBg mobile={quoteBg.mobile} tablet={quoteBg.tablet} desktop={quoteBg.desktop} size="50px_50px" />
+      <BlackGrainBackground className="flex w-full items-center justify-center px-6 py-20 sm:px-14 md:py-28 lg:py-32">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: `url('${quoteBg.desktop}')` }} />
         <blockquote className="relative max-w-[900px] border-l-2 border-white pl-4 text-left font-sans text-[28px] uppercase leading-[0.9] text-white sm:text-[36px] lg:text-[44px]">
           &ldquo;Execution is the strategy. Everything else is planning.&rdquo;-AS
         </blockquote>
-      </section>
+      </BlackGrainBackground>
 
-      <section className="relative flex w-full items-center justify-center overflow-hidden px-6 py-20 sm:px-14 md:py-28 lg:py-32">
-        <ResponsiveBg mobile={goodsBg.mobile} tablet={goodsBg.tablet} desktop={goodsBg.desktop} />
+      <WhiteGrainBackground className="flex w-full items-center justify-center px-6 py-20 sm:px-14 md:py-28 lg:py-32">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: `url('${goodsBg.desktop}')` }} />
 
         <div className="relative flex w-full max-w-[1000px] flex-col gap-8 border-l-2 border-black pl-4">
           <div className="flex items-center justify-between gap-4">
@@ -274,7 +262,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </WhiteGrainBackground>
 
       <section
         className="relative flex w-full items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-14 text-center sm:px-10"
@@ -292,23 +280,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="relative flex min-h-[500px] w-full items-center justify-center overflow-hidden bg-black px-6 py-24 sm:min-h-[600px] md:py-28">
-        <ResponsiveBg mobile={preFooterPattern.mobile} tablet={preFooterPattern.tablet} desktop={preFooterPattern.desktop} size="38.66px_38.66px" />
-        <img
-          src={preFooterShape}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-90"
-        />
-        <div className="relative z-10 flex flex-col items-center gap-6 text-center text-white">
-          <h2 className="font-sans text-[32px] uppercase leading-none sm:text-[42px] lg:text-[49px]">
-            Run the <strong className="font-bold">Moment.</strong>
-          </h2>
-          <button className="border-[1.5px] border-white px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">
-            Get In Touch
-          </button>
-        </div>
-      </section>
+      <PreFooter />
 
       <Footer />
     </div>

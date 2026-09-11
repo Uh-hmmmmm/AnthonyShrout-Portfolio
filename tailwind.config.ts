@@ -16,7 +16,8 @@ export default {
       fontFamily: {
         sans: ["Arimo", "-apple-system", "Roboto", "Helvetica", "sans-serif"],
         display: ["Anton", "Arimo", "sans-serif"],
-        blackletter: ["UnifrakturMaguntia", "cursive"],
+        blackletter: ["Old English Local", "UnifrakturMaguntia", "cursive"],
+        about: ["Evolve Early Local", "Anton", "Arimo", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

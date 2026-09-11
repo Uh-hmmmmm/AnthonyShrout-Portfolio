@@ -1,11 +1,10 @@
 import Footer from "@/components/Footer";
+import PreFooter from "@/components/PreFooter";
 
 const starAsset = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Ff35e5891ee674610a101c8bb2b597dff?format=webp&width=800&height=1200";
 const reelsAccentLeft = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F0b8de29430b54e08b5b1367d3cb989db";
 const reelsAccentRight = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd50f2356ed234c60ab7407d662fb71d6";
 const aboutAccent = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F198d7198f1f24e57add9915f01a4575d?format=webp&width=800&height=1200";
-const noiseCircle = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F35a2232877f64b53928757221e7d26a0";
-
 function StarBurst({ className = "" }: { className?: string }) {
   return <img src={starAsset} alt="" aria-hidden="true" className={`object-contain ${className}`} />;
 }
@@ -148,11 +147,7 @@ export default function Index() {
         <div className="mx-auto grid max-w-[1396px] grid-cols-2 items-center gap-3 md:grid-cols-4 lg:flex lg:justify-between lg:gap-4">{logoSources.map((src, index) => <img key={src + index} src={src} alt="Client logo" className="h-24 w-full object-contain md:h-32 lg:h-[107px] lg:w-[143px]" />)}</div>
       </section>
 
-      <section id="contact" className="relative flex min-h-[390px] scroll-mt-[63px] items-center justify-center overflow-hidden bg-[#f4f4f2] px-6 py-20 text-white md:min-h-[470px] lg:min-h-[540px]">
-        <div className="absolute inset-0 bg-[length:720px_720px] bg-repeat" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956')" }} />
-        <img src={noiseCircle} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-[-32%] aspect-square w-[130%] -translate-x-1/2 object-contain sm:top-[-48%] sm:w-[95%] lg:top-[-63%] lg:w-[78%]" />
-        <div className="relative z-10 flex flex-col items-center gap-5 pt-4"><h2 className="font-sans text-[25px] uppercase sm:text-[34px] lg:text-[44px]">Run the <strong>Moment.</strong></h2><button className="border-[1.5px] border-white px-6 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">Get In Touch</button></div>
-      </section>
+      <PreFooter />
 
       <Footer />
     </div>

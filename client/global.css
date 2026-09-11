@@ -3,6 +3,18 @@
 
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Evolve Early Local";
+  src: local("Evolve Early"), url("/fonts/evolve-early.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Old English Local";
+  src: local("Old English Text MT"), url("/fonts/old-english-text-mt.ttf") format("truetype");
+  font-display: swap;
+}
+
 /* Theme, content globs, and plugins are declared in tailwind.config.ts. */
 @config "../tailwind.config.ts";
 
