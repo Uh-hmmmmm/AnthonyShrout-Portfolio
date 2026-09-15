@@ -3,9 +3,9 @@ import PreFooter from "@/components/PreFooter";
 import Reels from "@/components/Reels";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 import { HeroReveal, Reveal } from "@/components/motion/Reveal";
+import { Link } from "react-router-dom";
 
 const starAsset = "/images/hero/Star.svg";
-const aboutAccent = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F198d7198f1f24e57add9915f01a4575d?format=webp&width=800&height=1200";
 function StarBurst({ className = "" }: { className?: string }) {
   return <img src={starAsset} alt="" aria-hidden="true" className={`object-contain ${className}`} />;
 }
@@ -48,7 +48,7 @@ export default function Index() {
       <WhiteGrainBackground className="w-full">
         <section className="relative z-10 flex min-h-[764px] w-full items-center justify-center overflow-hidden px-6 py-16 sm:px-10 md:min-h-[933px] md:px-[227px] md:py-24 lg:px-[451px] lg:py-[244px]">
         <div className="relative flex w-full max-w-[537px] flex-col items-start gap-4 border-l-2 border-black pl-4 md:gap-[17px] md:pl-4 lg:w-[537px] lg:max-w-none">
-          <HeroReveal delay={0} className="relative flex h-[137px] w-full items-end overflow-hidden p-3 md:h-[213px] md:p-4 lg:w-[537px]">
+          <HeroReveal delay={0} className="relative flex h-[137px] w-full items-start justify-end overflow-hidden p-3 md:h-[213px] md:p-4 lg:w-[537px]">
             <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/hero/anthony-portrait.png')" }} />
             <span className="relative font-sans text-[26px] font-normal uppercase leading-none text-white">Anthony Shrout</span>
           </HeroReveal>
@@ -57,8 +57,8 @@ export default function Index() {
             <StarBurst className="pointer-events-none hidden h-[41px] w-[41px] md:absolute md:-right-1 md:bottom-2 md:block" />
           </HeroReveal>
           <HeroReveal delay={0.3} className="flex w-full flex-col items-stretch gap-3 md:w-auto md:flex-row md:items-center md:gap-8">
-            <button className="border-[1.5px] border-[#121212] px-5 py-[5px] font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white lg:w-[225px]">My Work</button>
-            <button className="bg-black px-5 py-[5px] font-sans text-[18px] uppercase text-white transition-colors hover:bg-[#121212]/90 lg:w-[262px]">Get In Touch</button>
+            <Link to="/work" className="inline-flex items-center justify-center border-[1.5px] border-[#121212] px-5 py-[5px] font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white lg:w-[225px]">My Work</Link>
+            <Link to="/contact" className="inline-flex items-center justify-center border-[1.5px] border-black bg-black px-5 py-[5px] font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black lg:w-[262px]">Get In Touch</Link>
           </HeroReveal>
         </div>
       </section>
@@ -74,7 +74,7 @@ export default function Index() {
         <Reveal className="relative mx-auto flex w-full max-w-[931px] flex-col items-start gap-6 border-l-[1.56px] border-white pl-4 md:flex-row md:items-end md:justify-between md:gap-10">
           <div className="flex flex-col items-start gap-6 md:gap-[17px]">
             <p className="max-w-[418px] text-left text-[32px] font-normal uppercase leading-[0.95] text-white sm:max-w-[520px] md:max-w-[600px] lg:max-w-[700px] lg:text-[38px]">The space between a great <span className="font-bold">idea</span> and a great <span className="font-bold">production</span> is <span className="font-bold">experience</span>.</p>
-            <button className="border-[1.5px] border-white px-5 py-[5px] font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">My Work</button>
+            <Link to="/work" className="inline-flex items-center justify-center border-[1.5px] border-white px-5 py-[5px] font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">My Work</Link>
           </div>
           <div className="flex items-center gap-4"><StarBurst className="h-[30px] w-[30px]" /><TriangleIcon className="h-[24px] w-[32px]" /><CloverIcon className="h-[27px] w-[29px]" /></div>
         </Reveal>
@@ -89,7 +89,6 @@ export default function Index() {
       </BlackGrainBackground>
 
       <WhiteGrainBackground id="about" className="scroll-mt-[63px] px-6 py-24 md:px-[50px] md:py-[140px] lg:px-[calc((100%-758px)/2)] lg:py-[162px]">
-        <img src={aboutAccent} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[120%] w-[110%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain opacity-70 sm:h-[125%] lg:h-[135%] lg:w-[842px]" />
         <div className="relative mx-auto flex max-w-[760px] flex-col gap-3">
           <Reveal>
             <header className="flex items-center justify-between border-b border-black pb-2"><h2 className="font-sans text-[38px] font-bold uppercase leading-none text-[#121212] sm:text-[54px]">About</h2><svg className="h-8 w-8" viewBox="0 0 43 41" fill="none"><path d="M4.18 10.99h33.95L21.16 39.42 4.18 10.99Z" stroke="black" strokeWidth="1.53" /></svg></header>
@@ -98,7 +97,7 @@ export default function Index() {
             <p className="font-sans text-[18px] leading-tight text-[#121212] sm:text-[20px] lg:text-[28px]"><strong>Anthony Shrout </strong>produces high-stakes live events and brand experiences where there’s no room for guesswork. For <strong>15+ years</strong>, he’s brought the creative judgment, technical command, and calm execution needed to make the moment work.</p>
           </Reveal>
           <Reveal delay={0.2} className="flex flex-col justify-end gap-3 pt-2 sm:flex-row">
-            <button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white">My Work</button><button className="bg-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-black">Get In Touch</button>
+            <Link to="/work" className="inline-flex items-center justify-center border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white">My Work</Link><Link to="/contact" className="inline-flex items-center justify-center border-[1.5px] border-[#121212] bg-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-[#121212]">Get In Touch</Link>
           </Reveal>
         </div>
       </WhiteGrainBackground>

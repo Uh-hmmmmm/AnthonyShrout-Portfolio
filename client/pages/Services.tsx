@@ -4,9 +4,8 @@ import {
   BlackGrainBackground,
   WhiteGrainBackground,
 } from "@/components/Backgrounds";
-
-const heroBg =
-  "https://api.builder.io/api/v1/image/assets/TEMP/84c883c2a00558e51763ee8f60b3131f14074b7e?width=2880";
+import { HeroReveal, Reveal } from "@/components/motion/Reveal";
+import { Link } from "react-router-dom";
 
 function AccentMark({ className = "" }: { className?: string }) {
   return (
@@ -44,11 +43,12 @@ function ContactButton({
   className?: string;
 }) {
   return (
-    <button
-      className={`shrink-0 border-[1.5px] px-5 py-2 font-sans text-[18px] uppercase transition-colors ${className}`}
+    <Link
+      to="/contact"
+      className={`inline-flex shrink-0 items-center justify-center border-[1.5px] px-5 py-2 font-sans text-[18px] uppercase transition-colors ${className}`}
     >
       {children}
-    </button>
+    </Link>
   );
 }
 
@@ -130,7 +130,7 @@ function ServiceSection({ tone, title, description, includesLabel, includes, acc
 
   return (
     <Wrapper className="flex w-full items-center px-6 py-20 sm:px-10 md:px-[30px] md:py-28 lg:py-32">
-      <div
+      <Reveal
         className={`relative mx-auto flex w-full max-w-[858px] flex-col gap-8 ${borderSide} ${borderColor} pl-4 pr-4 ${align}`}
       >
         <div
@@ -142,7 +142,7 @@ function ServiceSection({ tone, title, description, includesLabel, includes, acc
           {accent && <AccentMark className={`hidden h-8 w-auto shrink-0 sm:block ${textColor}`} />}
         </div>
 
-        <p className={`font-sans text-[18px] leading-tight ${textColor} sm:text-[24px] lg:text-[32px]`}>
+        <p className={`font-sans text-[22px] leading-tight ${textColor}`}>
           {description}
         </p>
 
@@ -162,7 +162,7 @@ function ServiceSection({ tone, title, description, includesLabel, includes, acc
             {includes}
           </span>
         </div>
-      </div>
+      </Reveal>
     </Wrapper>
   );
 }
@@ -170,28 +170,29 @@ function ServiceSection({ tone, title, description, includesLabel, includes, acc
 export default function Services() {
   return (
     <div className="w-full bg-white">
-      <section
-        className="flex min-h-[500px] w-full flex-col overflow-hidden bg-cover bg-center bg-no-repeat px-6 pb-0 pt-32 sm:min-h-[600px] md:min-h-[774px]"
-        style={{ backgroundImage: `url('${heroBg}')` }}
-      >
+      <WhiteGrainBackground className="flex min-h-[500px] w-full flex-col overflow-hidden px-6 pb-0 pt-32 sm:min-h-[600px] md:min-h-[774px]">
         <div className="flex flex-1 items-center justify-center">
-          <p className="max-w-[500px] text-center font-sans text-[22px] uppercase leading-tight text-black sm:text-[30px] lg:max-w-[600px] lg:text-[37px]">
-            What will you say with <strong className="font-bold">your moment?</strong>
-          </p>
+          <HeroReveal>
+            <p className="max-w-[500px] text-center font-sans text-[22px] uppercase leading-tight text-black sm:text-[30px] lg:max-w-[600px] lg:text-[37px]">
+              What will you say with <strong className="font-bold">your moment?</strong>
+            </p>
+          </HeroReveal>
         </div>
         <div className="flex translate-y-[25%] justify-center">
-          <h1 className="font-about text-[64px] uppercase leading-none text-transparent [-webkit-text-stroke:1.2px_black] sm:text-[100px] lg:text-[119px] lg:[-webkit-text-stroke:1.5px_black]">
-            Services
-          </h1>
+          <HeroReveal delay={0.5}>
+            <h1 className="font-about text-[64px] uppercase leading-none text-transparent [-webkit-text-stroke:1.2px_black] sm:text-[100px] lg:text-[119px] lg:[-webkit-text-stroke:1.5px_black]">
+              Services
+            </h1>
+          </HeroReveal>
         </div>
-      </section>
+      </WhiteGrainBackground>
 
       {services.map((service) => (
         <ServiceSection key={service.title} {...service} />
       ))}
 
       <BlackGrainBackground className="flex w-full flex-col items-center gap-4 px-6 py-20 text-center sm:px-10 md:py-28">
-        <div className="relative flex w-full max-w-[404px] flex-col items-center gap-2">
+        <Reveal className="relative flex w-full max-w-[404px] flex-col items-center gap-2">
           <div className="flex w-full items-center justify-between gap-4">
             <h2 className="font-sans text-[32px] font-bold uppercase leading-none text-white sm:text-[40px] lg:text-[50px]">
               How it
@@ -201,19 +202,22 @@ export default function Services() {
           <h2 className="w-full text-center font-about text-[64px] uppercase leading-none text-transparent [-webkit-text-stroke:1.2px_white] sm:text-[100px] lg:text-[128px] lg:[-webkit-text-stroke:1.5px_white]">
             Works
           </h2>
-        </div>
+        </Reveal>
       </BlackGrainBackground>
 
       <WhiteGrainBackground className="flex w-full flex-col items-center px-6 py-20 sm:px-10 md:py-28 lg:py-36">
         <div className="relative mx-auto flex w-full max-w-[900px] flex-col gap-8 border-l-2 border-black pl-4">
-          <h2 className="font-sans text-[36px] font-bold uppercase leading-none text-[#121212] sm:text-[46px] lg:text-[50px]">
-            Process
-          </h2>
+          <Reveal>
+            <h2 className="font-sans text-[36px] font-bold uppercase leading-none text-[#121212] sm:text-[46px] lg:text-[50px]">
+              Process
+            </h2>
+          </Reveal>
 
           <div className="flex flex-col gap-11">
-            {process.map((item) => (
-              <div
+            {process.map((item, index) => (
+              <Reveal
                 key={item.title}
+                delay={index * 0.08}
                 className="flex flex-col gap-3 border-b-2 border-black pb-4"
               >
                 <h3 className="font-sans text-[20px] font-bold uppercase text-[#121212] sm:text-[28px]">
@@ -222,7 +226,7 @@ export default function Services() {
                 <p className="font-sans text-[18px] text-[#121212] sm:text-[24px]">
                   {item.description}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

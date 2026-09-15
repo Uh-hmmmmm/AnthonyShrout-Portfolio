@@ -48,9 +48,9 @@ export default function Nav() {
           <Logo />
         </Link>
         <nav className="hidden items-center gap-10 md:flex lg:gap-[65px]" aria-label="Main navigation">
-          <Link to="/about" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">About</Link>
-          <Link to="/work" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">Work</Link>
-          <Link to="/services" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">Services</Link>
+          <Link to="/about" className="group relative font-sans text-[21px] uppercase after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-[width] after:duration-300 after:ease-out hover:after:w-full">About</Link>
+          <Link to="/work" className="group relative font-sans text-[21px] uppercase after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-[width] after:duration-300 after:ease-out hover:after:w-full">Work</Link>
+          <Link to="/services" className="group relative font-sans text-[21px] uppercase after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-[width] after:duration-300 after:ease-out hover:after:w-full">Services</Link>
           <Link to="/contact" className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:opacity-80 ${useLightVariant ? "bg-white" : "text-white"}`}>Contact</Link>
         </nav>
         <button

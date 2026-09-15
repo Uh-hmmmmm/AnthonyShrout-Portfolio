@@ -1,10 +1,9 @@
 import { WhiteGrainBackground } from "@/components/Backgrounds";
 import { Reveal } from "@/components/motion/Reveal";
+import { Link } from "react-router-dom";
 
-const reelsAccentLeft =
-  "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F0b8de29430b54e08b5b1367d3cb989db";
-const reelsAccentRight =
-  "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd50f2356ed234c60ab7407d662fb71d6";
+const reelsAccentLeft = "/images/reels/BG Accent Left.svg";
+const reelsAccentRight = "/images/reels/BG Accent Right.svg";
 
 function ReelsMark() {
   return (
@@ -56,7 +55,7 @@ export default function Reels({ className = "" }: { className?: string }) {
     <WhiteGrainBackground
       className={`min-h-[900px] px-2 py-16 sm:px-10 md:min-h-[1100px] md:px-[94px] lg:min-h-[1278px] lg:px-[94px] lg:py-16 2xl:px-[346px] ${className}`}
     >
-      <div className="relative mx-auto flex w-full max-w-[748px] flex-col items-center gap-11 md:max-w-[748px] lg:max-w-[748px] 2xl:max-w-[1100px]">
+      <div className="relative z-10 mx-auto flex w-full max-w-[748px] flex-col items-center gap-11 md:max-w-[748px] lg:max-w-[748px] 2xl:max-w-[1100px]">
         <Reveal className="w-full">
           <header className="flex w-full items-end justify-between border-b-[3px] border-black pb-3">
             <ReelsMark />
@@ -69,34 +68,34 @@ export default function Reels({ className = "" }: { className?: string }) {
           <Reveal delay={0.05}>
             <ReelCard
               title="Producer | Technical Director"
-              image="https://api.builder.io/api/v1/image/assets/TEMP/59b8441dba9d7a319a74e6805fe20f4b4366cc2f?width=890"
+              image="/images/reels/Reel1_Temp.png"
             />
           </Reveal>
           <Reveal delay={0.15}>
             <ReelCard
               title="Producer | Editor"
-              image="https://api.builder.io/api/v1/image/assets/TEMP/45b1be1bd8e7abfcc897e9c67d67ae78737790fa?width=890"
+              image="/images/reels/Reel2_temp.png"
               reverse
             />
           </Reveal>
         </div>
         <Reveal delay={0.1}>
-          <button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white sm:px-10">
+          <Link to="/contact" className="inline-flex items-center justify-center border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white sm:px-10">
             Contact Me
-          </button>
+          </Link>
         </Reveal>
       </div>
       <img
         src={reelsAccentLeft}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -left-10 top-[31%] hidden h-[215px] w-[282.5px] max-w-none object-contain lg:block lg:h-[260px] lg:w-[340px]"
+        className="pointer-events-none absolute -left-10 top-[31%] z-0 hidden h-[215px] w-[282.5px] max-w-none object-contain lg:block lg:h-[260px] lg:w-[340px]"
       />
       <img
         src={reelsAccentRight}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -right-10 top-[31%] hidden h-[215px] w-[282.5px] max-w-none object-contain lg:block lg:h-[260px] lg:w-[340px]"
+        className="pointer-events-none absolute -right-10 top-[31%] z-0 hidden h-[215px] w-[282.5px] max-w-none object-contain lg:block lg:h-[260px] lg:w-[340px]"
       />
     </WhiteGrainBackground>
   );

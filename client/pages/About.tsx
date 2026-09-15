@@ -2,6 +2,8 @@ import Footer from "@/components/Footer";
 import PreFooter from "@/components/PreFooter";
 import BroadcastingCredits from "@/components/BroadcastingCredits";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
+import { HeroReveal, Reveal } from "@/components/motion/Reveal";
+import { Link } from "react-router-dom";
 
 function OnLocationIcon({ className = "" }: { className?: string }) {
   return (
@@ -98,11 +100,14 @@ const goods = [
   },
 ];
 
-function OutlineButton({ children }: { children: string }) {
+function OutlineButton({ to, children }: { to: string; children: string }) {
   return (
-    <button className="border-[1.5px] border-white px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">
+    <Link
+      to={to}
+      className="inline-flex items-center justify-center border-[1.5px] border-white px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black"
+    >
       {children}
-    </button>
+    </Link>
   );
 }
 
@@ -111,9 +116,11 @@ export default function About() {
     <div className="w-full bg-white">
       <WhiteGrainBackground className="flex min-h-[500px] w-full flex-col overflow-hidden px-6 pb-0 pt-32 sm:min-h-[600px] md:min-h-[728px]">
         <div className="relative z-10 flex flex-1 items-center justify-center text-center">
-          <p className="font-sans text-[16px] font-bold uppercase text-black sm:text-[20px] lg:text-[26px]">
-            The producer behind the production
-          </p>
+          <HeroReveal>
+            <p className="font-sans text-[16px] font-bold uppercase text-black sm:text-[20px] lg:text-[26px]">
+              The producer behind the production
+            </p>
+          </HeroReveal>
         </div>
         <div className="relative z-10 flex translate-y-[25%] justify-center text-center">
           <h1 className="flex items-center font-about text-[70px] uppercase leading-none text-transparent [-webkit-text-stroke:1.5px_black] sm:text-[130px] lg:[-webkit-text-stroke:2px_black] lg:text-[220px]">
@@ -124,15 +131,15 @@ export default function About() {
       </WhiteGrainBackground>
 
       <BlackGrainBackground className="flex w-full flex-col items-center gap-12 px-6 py-20 sm:px-10 md:py-28 lg:flex-row lg:items-start lg:justify-center lg:gap-6 lg:px-14 lg:py-32">
-        <div className="relative order-2 flex flex-col items-center gap-3 text-center lg:order-1 lg:w-[300px] lg:items-end lg:gap-3 lg:border-r-2 lg:border-white lg:pr-5 lg:text-right">
+        <Reveal className="relative order-2 flex flex-col items-center gap-3 text-center lg:order-1 lg:w-[300px] lg:items-end lg:gap-3 lg:border-r-2 lg:border-white lg:pr-5 lg:text-right">
           {callouts.map((item) => (
             <span key={item} className="font-sans text-[16px] uppercase text-white sm:text-[20px] lg:text-[22px]">
               {item}
             </span>
           ))}
-        </div>
+        </Reveal>
 
-        <div className="relative order-1 flex max-w-[520px] flex-col items-center gap-8 text-center lg:order-2 lg:items-center">
+        <Reveal delay={0.1} className="relative order-1 flex max-w-[520px] flex-col items-center gap-8 text-center lg:order-2 lg:items-center">
           <p className="font-sans text-[18px] leading-snug text-white sm:text-[22px] lg:text-[24px]">
             Anthony Shrout is a New York-based <strong className="font-bold">video producer</strong> and{" "}
             <strong className="font-bold">technical director</strong> working across{" "}
@@ -141,14 +148,14 @@ export default function About() {
             <strong className="font-bold">hospitality, technology, finance, and culture.</strong>
           </p>
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-            <OutlineButton>My Work</OutlineButton>
-            <OutlineButton>Get In Touch</OutlineButton>
+            <OutlineButton to="/work">My Work</OutlineButton>
+            <OutlineButton to="/contact">Get In Touch</OutlineButton>
           </div>
-        </div>
+        </Reveal>
       </BlackGrainBackground>
 
       <WhiteGrainBackground className="flex w-full flex-col items-center gap-16 px-6 py-20 sm:px-10 md:py-28 lg:py-36">
-        <div className="relative flex max-w-[700px] flex-col items-center gap-4 text-center">
+        <Reveal className="relative flex max-w-[700px] flex-col items-center gap-4 text-center">
           <h2 className="font-sans text-[36px] font-normal uppercase leading-none text-[#121212] sm:text-[46px] lg:text-[50px]">
             <strong className="font-bold">Handling</strong> the hard parts
           </h2>
@@ -157,27 +164,29 @@ export default function About() {
             creative, technical, and production expertise to complex projects from first brief through final
             delivery.
           </p>
-        </div>
+        </Reveal>
 
         <div className="relative grid w-full max-w-[1200px] grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          {handlingCards.map(({ Icon, title, desc }) => (
-            <div key={title} className="flex flex-col items-center gap-3 text-center text-[#121212]">
+          {handlingCards.map(({ Icon, title, desc }, index) => (
+            <Reveal key={title} delay={index * 0.08} className="flex flex-col items-center gap-3 text-center text-[#121212]">
               <Icon className="h-20 w-full max-w-[180px]" />
               <h3 className="font-sans text-[24px] font-bold uppercase leading-tight sm:text-[28px]">{title}</h3>
               <p className="font-sans text-[16px] leading-snug sm:text-[18px]">{desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </WhiteGrainBackground>
 
       <BlackGrainBackground className="flex w-full items-center justify-center px-6 py-20 sm:px-14 md:py-28 lg:py-32">
-        <blockquote className="relative max-w-[900px] border-l-2 border-white pl-4 text-left font-sans text-[28px] uppercase leading-[0.9] text-white sm:text-[36px] lg:text-[44px]">
-          &ldquo;Execution is the strategy. Everything else is planning.&rdquo;-AS
-        </blockquote>
+        <Reveal>
+          <blockquote className="relative max-w-[900px] border-l-2 border-white pl-4 text-left font-sans text-[28px] uppercase leading-[0.9] text-white sm:text-[36px] lg:text-[44px]">
+            &ldquo;Execution is the strategy. Everything else is planning.&rdquo;-AS
+          </blockquote>
+        </Reveal>
       </BlackGrainBackground>
 
       <WhiteGrainBackground className="flex w-full items-center justify-center px-6 py-20 sm:px-14 md:py-28 lg:py-32">
-        <div className="relative flex w-full max-w-[1000px] flex-col gap-8 border-l-2 border-black pl-4">
+        <Reveal className="relative flex w-full max-w-[1000px] flex-col gap-8 border-l-2 border-black pl-4">
           <div className="flex items-center justify-between gap-4">
             <h2 className="font-sans text-[36px] font-bold uppercase leading-none text-[#121212] sm:text-[46px] lg:text-[50px]">
               The Goods
@@ -186,18 +195,18 @@ export default function About() {
           </div>
 
           <div className="flex flex-col gap-8">
-            {goods.map((item) => (
-              <div key={item.title} className="flex flex-col gap-3 border-b-2 border-black pb-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+            {goods.map((item, index) => (
+              <Reveal key={item.title} delay={index * 0.05} className="flex flex-col gap-3 border-b-2 border-black pb-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
                 <h3 className="font-sans text-[18px] font-bold uppercase leading-tight text-[#121212] sm:w-[300px] sm:shrink-0 sm:text-[22px]">
                   {item.title}
                 </h3>
                 <p className="font-sans text-[16px] leading-snug text-[#121212] sm:text-right sm:text-[18px]">
                   {item.desc}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </WhiteGrainBackground>
 
       <BroadcastingCredits />

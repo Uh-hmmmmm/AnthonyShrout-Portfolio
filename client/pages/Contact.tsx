@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
+import { HeroReveal, Reveal } from "@/components/motion/Reveal";
 
 function Field({
   label,
@@ -42,13 +43,15 @@ export default function Contact() {
   return (
     <div className="w-full bg-white">
       <BlackGrainBackground className="flex min-h-[220px] w-full items-end justify-start px-6 pb-6 pt-28 sm:min-h-[260px] sm:px-10 md:min-h-[290px] md:px-14 md:pb-8">
-        <h1 className="font-about text-[60px] uppercase leading-none text-transparent [-webkit-text-stroke:1.5px_white] sm:text-[90px] lg:[-webkit-text-stroke:2px_white] lg:text-[119px]">
-          Contact
-        </h1>
+        <HeroReveal>
+          <h1 className="font-about text-[60px] uppercase leading-none text-transparent [-webkit-text-stroke:1.5px_white] sm:text-[90px] lg:[-webkit-text-stroke:2px_white] lg:text-[119px]">
+            Contact
+          </h1>
+        </HeroReveal>
       </BlackGrainBackground>
 
       <WhiteGrainBackground className="flex w-full flex-col items-stretch gap-16 px-6 py-16 sm:px-10 md:py-24 lg:flex-row lg:items-start lg:justify-center lg:gap-11 lg:px-14 lg:py-[151px]">
-        <div className="flex w-full max-w-[484px] flex-col items-start gap-8 border-l-2 border-black pl-4 text-left lg:pl-[17px]">
+        <Reveal className="flex w-full max-w-[484px] flex-col items-start gap-8 border-l-2 border-black pl-4 text-left lg:pl-[17px]">
           <h2 className="font-sans text-[36px] font-bold uppercase leading-none text-black sm:text-[42px] lg:text-[50px]">
             Anthony Shrout
           </h2>
@@ -77,9 +80,9 @@ export default function Contact() {
             <strong className="font-bold">New York Metro Area</strong> Available for
             travel nationally
           </p>
-        </div>
+        </Reveal>
 
-        <div className="flex w-full max-w-[736px] flex-col items-stretch gap-8">
+        <Reveal delay={0.1} className="flex w-full max-w-[736px] flex-col items-stretch gap-8">
           <p className="font-sans text-[18px] leading-snug text-black sm:text-[22px] lg:text-[24px]">
             Whether you have a brief ready or just an idea — reach out. Response
             time is typically within one business day.
@@ -103,7 +106,7 @@ export default function Contact() {
               Send Message
             </button>
           </form>
-        </div>
+        </Reveal>
       </WhiteGrainBackground>
 
       <Footer />

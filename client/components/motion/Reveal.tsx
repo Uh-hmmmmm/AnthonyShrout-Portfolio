@@ -37,7 +37,7 @@ export function Reveal({
 export function HeroReveal({
   delay = 0,
   y = 20,
-  duration = 0.8,
+  duration = 1.5,
   children,
   ...rest
 }: Omit<RevealProps, "once">) {
