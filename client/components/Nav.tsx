@@ -45,7 +45,7 @@ export default function Nav() {
         </Link>
         <nav className="hidden items-center gap-10 md:flex lg:gap-[65px]" aria-label="Main navigation">
           <Link to="/about" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">About</Link>
-          <a href={sectionHref("services")} className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">Services</a>
+          <Link to="/services" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">Services</Link>
           <a href={sectionHref("contact")} className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:opacity-80 ${isScrolled ? "bg-white" : "text-white"}`}>Contact</a>
         </nav>
         <button
@@ -63,7 +63,7 @@ export default function Nav() {
       {isMenuOpen && (
         <nav className={`border-t border-current px-6 py-4 md:hidden ${isScrolled ? "bg-black" : "bg-black/90 text-white"}`} aria-label="Mobile navigation">
           <Link to="/about" onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">About</Link>
-          <a href={sectionHref("services")} onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">Services</a>
+          <Link to="/services" onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">Services</Link>
           <a href={sectionHref("contact")} onClick={closeMenu} className="block py-4 font-sans text-xl uppercase">Contact</a>
         </nav>
       )}
