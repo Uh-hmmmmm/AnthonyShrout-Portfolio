@@ -5,13 +5,14 @@
 
 @font-face {
   font-family: "Evolve Early Local";
-  src: local("Evolve Early"), url("/fonts/evolve-early.ttf") format("truetype");
+  src: local("Evolve Early"), url("/fonts/EvolveEarly-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Old English Local";
-  src: local("Old English Text MT"), url("/fonts/old-english-text-mt.ttf") format("truetype");
+  src: local("Old English Text MT"), url("/fonts/OLDENGL.TTF") format("truetype");
   font-display: swap;
 }
 

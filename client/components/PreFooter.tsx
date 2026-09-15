@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import { WhiteGrainBackground } from "@/components/Backgrounds";
+import { Reveal } from "@/components/motion/Reveal";
 
-const grainCircle =
-  "https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880";
-const shape = "https://api.builder.io/api/v1/image/assets/TEMP/822b6d8bb3d3a8701adc982e870527ef243ff8b5?width=2975";
+const grainCircle = "/images/backgrounds/Grain Circle.png";
 
 export default function PreFooter() {
   return (
@@ -11,17 +10,13 @@ export default function PreFooter() {
       id="contact"
       className="min-h-[500px] scroll-mt-[63px] px-6 py-24 sm:min-h-[600px] md:py-28"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
-        style={{ backgroundImage: `url('${grainCircle}')` }}
-      />
       <img
-        src={shape}
+        src={grainCircle}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-15"
+        className="pointer-events-none absolute left-1/2 top-0 h-auto w-[720px] max-w-none -translate-x-1/2 -translate-y-[38%] object-contain sm:w-[900px] md:w-[1100px] lg:w-[1300px]"
       />
-      <div className="relative z-10 flex flex-col items-center gap-6 text-center text-white">
+      <Reveal className="relative z-10 flex flex-col items-center gap-6 text-center text-white">
         <h2 className="font-sans text-[32px] uppercase leading-none sm:text-[42px] lg:text-[49px]">
           Run the <strong className="font-bold">Moment.</strong>
         </h2>
@@ -31,7 +26,7 @@ export default function PreFooter() {
         >
           Get In Touch
         </Link>
-      </div>
+      </Reveal>
     </WhiteGrainBackground>
   );
 }

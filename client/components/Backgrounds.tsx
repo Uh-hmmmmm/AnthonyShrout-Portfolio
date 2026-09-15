@@ -3,8 +3,8 @@ import type { CSSProperties, HTMLAttributes, ReactNode } from "react";
 type GrainTone = "white" | "black";
 
 const grainAssets: Record<GrainTone, string> = {
-  white: "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fc9bb0a54de0b4dfe97305b73ef079245?format=webp&width=800&height=1200",
-  black: "https://api.builder.io/api/v1/image/assets/TEMP/367da0ee53d886d7d2b36f24f36afb588e593696?width=956",
+  white: "/images/backgrounds/Grain_White.png",
+  black: "/images/backgrounds/Grain_Black.jpg",
 };
 
 export function GrainBackground({
@@ -25,7 +25,7 @@ export function GrainBackground({
       {...rest}
       style={{
         backgroundImage: `url('${grainAssets[tone]}')`,
-        backgroundSize: tone === "white" ? "720px 720px" : "38px 38px",
+        backgroundSize: tone === "white" ? "720px 720px" : "720px 720px",
         ...style,
       }}
     >

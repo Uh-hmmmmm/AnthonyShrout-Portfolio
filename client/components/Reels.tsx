@@ -1,4 +1,5 @@
 import { WhiteGrainBackground } from "@/components/Backgrounds";
+import { Reveal } from "@/components/motion/Reveal";
 
 const reelsAccentLeft =
   "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F0b8de29430b54e08b5b1367d3cb989db";
@@ -56,26 +57,34 @@ export default function Reels({ className = "" }: { className?: string }) {
       className={`min-h-[900px] px-2 py-16 sm:px-10 md:min-h-[1100px] md:px-[94px] lg:min-h-[1278px] lg:px-[94px] lg:py-16 2xl:px-[346px] ${className}`}
     >
       <div className="relative mx-auto flex w-full max-w-[748px] flex-col items-center gap-11 md:max-w-[748px] lg:max-w-[748px] 2xl:max-w-[1100px]">
-        <header className="flex w-full items-end justify-between border-b-[3px] border-black pb-3">
-          <ReelsMark />
-          <h2 className="font-sans text-[38px] font-bold uppercase leading-none text-[#121212] sm:text-[53px]">
-            REELS
-          </h2>
-        </header>
+        <Reveal className="w-full">
+          <header className="flex w-full items-end justify-between border-b-[3px] border-black pb-3">
+            <ReelsMark />
+            <h2 className="font-sans text-[38px] font-bold uppercase leading-none text-[#121212] sm:text-[53px]">
+              REELS
+            </h2>
+          </header>
+        </Reveal>
         <div className="flex w-full flex-col gap-8">
-          <ReelCard
-            title="Producer | Technical Director"
-            image="https://api.builder.io/api/v1/image/assets/TEMP/59b8441dba9d7a319a74e6805fe20f4b4366cc2f?width=890"
-          />
-          <ReelCard
-            title="Producer | Editor"
-            image="https://api.builder.io/api/v1/image/assets/TEMP/45b1be1bd8e7abfcc897e9c67d67ae78737790fa?width=890"
-            reverse
-          />
+          <Reveal delay={0.05}>
+            <ReelCard
+              title="Producer | Technical Director"
+              image="https://api.builder.io/api/v1/image/assets/TEMP/59b8441dba9d7a319a74e6805fe20f4b4366cc2f?width=890"
+            />
+          </Reveal>
+          <Reveal delay={0.15}>
+            <ReelCard
+              title="Producer | Editor"
+              image="https://api.builder.io/api/v1/image/assets/TEMP/45b1be1bd8e7abfcc897e9c67d67ae78737790fa?width=890"
+              reverse
+            />
+          </Reveal>
         </div>
-        <button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white sm:px-10">
-          Contact Me
-        </button>
+        <Reveal delay={0.1}>
+          <button className="border-[1.5px] border-[#121212] px-8 py-2 font-sans text-[18px] uppercase text-[#121212] transition-colors hover:bg-[#121212] hover:text-white sm:px-10">
+            Contact Me
+          </button>
+        </Reveal>
       </div>
       <img
         src={reelsAccentLeft}

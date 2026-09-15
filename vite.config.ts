@@ -12,6 +12,9 @@ export default defineConfig(({ mode }) => ({
       allow: ["./client", "./shared", "index.html"],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
+    watch: {
+      ignored: ["**/public/fonts/**"],
+    },
   },
   build: {
     outDir: "dist/spa",
