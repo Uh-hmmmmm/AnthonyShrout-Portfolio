@@ -23,6 +23,7 @@ function Logo() {
 export default function Nav() {
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isDarkHero = location.pathname === "/work";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,18 +36,24 @@ export default function Nav() {
 
   const sectionHref = (id: string) => (isHome ? "#" + id : "/#" + id);
   const closeMenu = () => setIsMenuOpen(false);
-  const theme = isScrolled ? "bg-black text-white" : "bg-transparent text-[#121212]";
+  const useLightVariant = isScrolled || isDarkHero;
+  const theme = isScrolled
+    ? "bg-black text-white"
+    : isDarkHero
+      ? "bg-transparent text-white"
+      : "bg-transparent text-[#121212]";
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 border-b-2 transition-colors duration-300 ${theme} ${isScrolled ? "border-white" : "border-[#121212]"}`}>
+    <header className={`fixed inset-x-0 top-0 z-50 border-b-2 transition-colors duration-300 ${theme} ${useLightVariant ? "border-white" : "border-[#121212]"}`}>
       <div className="flex h-[63px] items-center justify-between px-[17px] sm:px-6 md:px-[30px] lg:px-[17px]">
         <Link to="/" aria-label="Home" onClick={closeMenu}>
           <Logo />
         </Link>
         <nav className="hidden items-center gap-10 md:flex lg:gap-[65px]" aria-label="Main navigation">
           <Link to="/about" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">About</Link>
+          <Link to="/work" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">Work</Link>
           <Link to="/services" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">Services</Link>
-          <a href={sectionHref("contact")} className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:opacity-80 ${isScrolled ? "bg-white" : "text-white"}`}>Contact</a>
+          <a href={sectionHref("contact")} className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:opacity-80 ${useLightVariant ? "bg-white" : "text-white"}`}>Contact</a>
         </nav>
         <button
           type="button"
@@ -63,6 +70,7 @@ export default function Nav() {
       {isMenuOpen && (
         <nav className={`border-t border-current px-6 py-4 md:hidden ${isScrolled ? "bg-black" : "bg-black/90 text-white"}`} aria-label="Mobile navigation">
           <Link to="/about" onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">About</Link>
+          <Link to="/work" onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">Work</Link>
           <Link to="/services" onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">Services</Link>
           <a href={sectionHref("contact")} onClick={closeMenu} className="block py-4 font-sans text-xl uppercase">Contact</a>
         </nav>

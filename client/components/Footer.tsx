@@ -30,6 +30,7 @@ export default function Footer() {
           </strong>
           <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[11px] font-medium">
             <Link to="/about">About</Link>
+            <Link to="/work">Work</Link>
             <Link to="/services">Services</Link>
             <a href={sectionHref("contact")}>Contact</a>
             <a href="#privacy">Privacy</a>

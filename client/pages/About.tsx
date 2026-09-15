@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import PreFooter from "@/components/PreFooter";
+import BroadcastingCredits from "@/components/BroadcastingCredits";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 
 const quoteBg = {
@@ -19,9 +20,6 @@ const goodsBg = {
   desktop:
     "https://api.builder.io/api/v1/image/assets/TEMP/889095e7a5911af0a68575b87b8b3dafb72bf38c?width=2880",
 };
-
-const creditsBg =
-  "https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880";
 
 function OnLocationIcon({ className = "" }: { className?: string }) {
   return (
@@ -221,19 +219,7 @@ export default function About() {
         </div>
       </WhiteGrainBackground>
 
-      <BlackGrainBackground className="flex w-full items-center justify-center px-6 py-14 text-center sm:px-10">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: `url('${creditsBg}')` }} />
-        <div className="relative flex flex-col items-center gap-3 text-white">
-          <p className="font-sans text-[14px] uppercase tracking-[0.2em] sm:text-[16px]">Broadcasting Credits</p>
-          <p className="font-sans text-[24px] font-bold uppercase leading-tight sm:text-[32px] lg:text-[38px]">
-            · NBC Sports · ESPN ·
-            <br />
-            · Feld Entertainment ·
-            <br />
-            · NEP Broadcasting ·
-          </p>
-        </div>
-      </BlackGrainBackground>
+      <BroadcastingCredits />
 
       <PreFooter />
 
