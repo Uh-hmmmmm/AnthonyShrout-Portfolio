@@ -2,9 +2,6 @@ import Footer from "@/components/Footer";
 import PreFooter from "@/components/PreFooter";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 
-const handlingBg =
-  "https://api.builder.io/api/v1/image/assets/TEMP/7ea878d14c15b6bf03b7fdcfca4bb856e7860bba?width=956";
-
 const quoteBg = {
   mobile:
     "https://api.builder.io/api/v1/image/assets/TEMP/367da0ee53d886d7d2b36f24f36afb588e593696?width=956",
@@ -169,7 +166,6 @@ export default function About() {
       </BlackGrainBackground>
 
       <WhiteGrainBackground className="flex w-full flex-col items-center gap-16 px-6 py-20 sm:px-10 md:py-28 lg:py-36">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: `url('${handlingBg}')` }} />
         <div className="relative flex max-w-[700px] flex-col items-center gap-4 text-center">
           <h2 className="font-sans text-[36px] font-normal uppercase leading-none text-[#121212] sm:text-[46px] lg:text-[50px]">
             <strong className="font-bold">Handling</strong> the hard parts
