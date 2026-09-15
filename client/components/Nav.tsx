@@ -22,8 +22,7 @@ function Logo() {
 
 export default function Nav() {
   const location = useLocation();
-  const isHome = location.pathname === "/";
-  const isDarkHero = location.pathname === "/work";
+  const isDarkHero = location.pathname === "/work" || location.pathname === "/contact";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -34,7 +33,6 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", updateScrollState);
   }, []);
 
-  const sectionHref = (id: string) => (isHome ? "#" + id : "/#" + id);
   const closeMenu = () => setIsMenuOpen(false);
   const useLightVariant = isScrolled || isDarkHero;
   const theme = isScrolled
@@ -53,7 +51,7 @@ export default function Nav() {
           <Link to="/about" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">About</Link>
           <Link to="/work" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">Work</Link>
           <Link to="/services" className="font-sans text-[21px] uppercase transition-opacity hover:opacity-70">Services</Link>
-          <a href={sectionHref("contact")} className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:opacity-80 ${useLightVariant ? "bg-white" : "text-white"}`}>Contact</a>
+          <Link to="/contact" className={`bg-[#121212] px-5 py-[5px] font-sans text-[20px] uppercase text-[#121212] transition-colors hover:opacity-80 ${useLightVariant ? "bg-white" : "text-white"}`}>Contact</Link>
         </nav>
         <button
           type="button"
@@ -72,7 +70,7 @@ export default function Nav() {
           <Link to="/about" onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">About</Link>
           <Link to="/work" onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">Work</Link>
           <Link to="/services" onClick={closeMenu} className="block border-b border-current/30 py-4 font-sans text-xl uppercase">Services</Link>
-          <a href={sectionHref("contact")} onClick={closeMenu} className="block py-4 font-sans text-xl uppercase">Contact</a>
+          <Link to="/contact" onClick={closeMenu} className="block py-4 font-sans text-xl uppercase">Contact</Link>
         </nav>
       )}
     </header>

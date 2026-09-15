@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { WhiteGrainBackground } from "@/components/Backgrounds";
 
 const grainCircle =
@@ -24,9 +25,12 @@ export default function PreFooter() {
         <h2 className="font-sans text-[32px] uppercase leading-none sm:text-[42px] lg:text-[49px]">
           Run the <strong className="font-bold">Moment.</strong>
         </h2>
-        <button className="border-[1.5px] border-white px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black">
+        <Link
+          to="/contact"
+          className="border-[1.5px] border-white px-8 py-2 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black"
+        >
           Get In Touch
-        </button>
+        </Link>
       </div>
     </WhiteGrainBackground>
   );

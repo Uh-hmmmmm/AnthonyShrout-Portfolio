@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Socials() {
   return (
@@ -17,10 +17,6 @@ function Socials() {
 }
 
 export default function Footer() {
-  const { pathname } = useLocation();
-  const isHome = pathname === "/";
-  const sectionHref = (id: string) => (isHome ? `#${id}` : `/#${id}`);
-
   return (
     <footer className="border-y border-[#121212] bg-white px-6 py-8 text-[#121212] md:px-[62px] md:py-7 lg:px-[90px] lg:py-[42px]">
       <div className="flex flex-col gap-5">
@@ -32,7 +28,7 @@ export default function Footer() {
             <Link to="/about">About</Link>
             <Link to="/work">Work</Link>
             <Link to="/services">Services</Link>
-            <a href={sectionHref("contact")}>Contact</a>
+            <Link to="/contact">Contact</Link>
             <a href="#privacy">Privacy</a>
           </nav>
           <Socials />
