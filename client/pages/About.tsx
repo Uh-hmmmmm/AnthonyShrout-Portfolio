@@ -3,24 +3,6 @@ import PreFooter from "@/components/PreFooter";
 import BroadcastingCredits from "@/components/BroadcastingCredits";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 
-const quoteBg = {
-  mobile:
-    "https://api.builder.io/api/v1/image/assets/TEMP/367da0ee53d886d7d2b36f24f36afb588e593696?width=956",
-  tablet:
-    "https://api.builder.io/api/v1/image/assets/TEMP/4b8dc0d8b44f1018fd4fe00f3e79c57f88cf7ae4?width=1982",
-  desktop:
-    "https://api.builder.io/api/v1/image/assets/TEMP/91c4988a5be8cc09238e47fbc436c26fdbc86ed0?width=2880",
-};
-
-const goodsBg = {
-  mobile:
-    "https://api.builder.io/api/v1/image/assets/TEMP/5c93511cc5454fb0a0d28737aea73017a8f56068?width=956",
-  tablet:
-    "https://api.builder.io/api/v1/image/assets/TEMP/45f7f6f00b4e3a5fc6cacd4e3145b06e5390f17c?width=1982",
-  desktop:
-    "https://api.builder.io/api/v1/image/assets/TEMP/889095e7a5911af0a68575b87b8b3dafb72bf38c?width=2880",
-};
-
 function OnLocationIcon({ className = "" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 226 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,13 +109,15 @@ function OutlineButton({ children }: { children: string }) {
 export default function About() {
   return (
     <div className="w-full bg-white">
-      <WhiteGrainBackground className="flex min-h-[500px] w-full flex-col items-center justify-end px-6 pb-16 pt-32 sm:min-h-[600px] sm:pb-20 md:min-h-[728px] md:pb-24 lg:pb-28">
-        <div className="relative z-10 flex flex-col items-center gap-6 text-center">
+      <WhiteGrainBackground className="flex min-h-[500px] w-full flex-col overflow-hidden px-6 pb-0 pt-32 sm:min-h-[600px] md:min-h-[728px]">
+        <div className="relative z-10 flex flex-1 items-center justify-center text-center">
           <p className="font-sans text-[16px] font-bold uppercase text-black sm:text-[20px] lg:text-[26px]">
             The producer behind the production
           </p>
+        </div>
+        <div className="relative z-10 flex translate-y-[25%] justify-center text-center">
           <h1 className="flex items-center font-about text-[70px] uppercase leading-none text-transparent [-webkit-text-stroke:1.5px_black] sm:text-[130px] lg:[-webkit-text-stroke:2px_black] lg:text-[220px]">
-            <span className="font-blackletter normal-case text-black [-webkit-text-fill-color:black] [-webkit-text-stroke:0]">A</span>
+            <span className="inline-block -translate-y-[12%] font-blackletter normal-case">A</span>
             bout
           </h1>
         </div>
@@ -187,15 +171,12 @@ export default function About() {
       </WhiteGrainBackground>
 
       <BlackGrainBackground className="flex w-full items-center justify-center px-6 py-20 sm:px-14 md:py-28 lg:py-32">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: `url('${quoteBg.desktop}')` }} />
         <blockquote className="relative max-w-[900px] border-l-2 border-white pl-4 text-left font-sans text-[28px] uppercase leading-[0.9] text-white sm:text-[36px] lg:text-[44px]">
           &ldquo;Execution is the strategy. Everything else is planning.&rdquo;-AS
         </blockquote>
       </BlackGrainBackground>
 
       <WhiteGrainBackground className="flex w-full items-center justify-center px-6 py-20 sm:px-14 md:py-28 lg:py-32">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: `url('${goodsBg.desktop}')` }} />
-
         <div className="relative flex w-full max-w-[1000px] flex-col gap-8 border-l-2 border-black pl-4">
           <div className="flex items-center justify-between gap-4">
             <h2 className="font-sans text-[36px] font-bold uppercase leading-none text-[#121212] sm:text-[46px] lg:text-[50px]">

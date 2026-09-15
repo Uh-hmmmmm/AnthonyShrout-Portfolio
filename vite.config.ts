@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
     watch: {
-      ignored: ["**/public/fonts/**"],
+      ignored: ["**/public/**"],
     },
   },
   build: {

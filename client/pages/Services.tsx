@@ -171,15 +171,19 @@ export default function Services() {
   return (
     <div className="w-full bg-white">
       <section
-        className="flex min-h-[500px] w-full flex-col items-center justify-end gap-8 bg-cover bg-center bg-no-repeat px-6 pb-16 pt-32 sm:min-h-[600px] sm:pb-20 md:min-h-[774px] md:pb-24 lg:pb-28"
+        className="flex min-h-[500px] w-full flex-col overflow-hidden bg-cover bg-center bg-no-repeat px-6 pb-0 pt-32 sm:min-h-[600px] md:min-h-[774px]"
         style={{ backgroundImage: `url('${heroBg}')` }}
       >
-        <p className="max-w-[500px] text-center font-sans text-[22px] uppercase leading-tight text-black sm:text-[30px] lg:max-w-[600px] lg:text-[37px]">
-          What will you say with <strong className="font-bold">your moment?</strong>
-        </p>
-        <h1 className="font-about text-[64px] uppercase leading-none text-transparent [-webkit-text-stroke:1.2px_black] sm:text-[100px] lg:text-[119px] lg:[-webkit-text-stroke:1.5px_black]">
-          Services
-        </h1>
+        <div className="flex flex-1 items-center justify-center">
+          <p className="max-w-[500px] text-center font-sans text-[22px] uppercase leading-tight text-black sm:text-[30px] lg:max-w-[600px] lg:text-[37px]">
+            What will you say with <strong className="font-bold">your moment?</strong>
+          </p>
+        </div>
+        <div className="flex translate-y-[25%] justify-center">
+          <h1 className="font-about text-[64px] uppercase leading-none text-transparent [-webkit-text-stroke:1.2px_black] sm:text-[100px] lg:text-[119px] lg:[-webkit-text-stroke:1.5px_black]">
+            Services
+          </h1>
+        </div>
       </section>
 
       {services.map((service) => (

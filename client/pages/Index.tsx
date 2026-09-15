@@ -4,7 +4,7 @@ import Reels from "@/components/Reels";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 import { HeroReveal, Reveal } from "@/components/motion/Reveal";
 
-const starAsset = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Ff35e5891ee674610a101c8bb2b597dff?format=webp&width=800&height=1200";
+const starAsset = "/images/hero/Star.svg";
 const aboutAccent = "https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2F198d7198f1f24e57add9915f01a4575d?format=webp&width=800&height=1200";
 function StarBurst({ className = "" }: { className?: string }) {
   return <img src={starAsset} alt="" aria-hidden="true" className={`object-contain ${className}`} />;
@@ -27,14 +27,14 @@ function CloverIcon({ className = "" }: { className?: string }) {
 }
 
 const logoSources = [
-  "https://api.builder.io/api/v1/image/assets/TEMP/1bbca1ac6708ff5a38af946baaa0a25369680091?width=286",
-  "https://api.builder.io/api/v1/image/assets/TEMP/57fc53e60fc0699f4bc4e8a28148562af36abb79?width=284",
-  "https://api.builder.io/api/v1/image/assets/TEMP/2809c91bbc77e28edf8f408b10bb733ffda48fc5?width=286",
-  "https://api.builder.io/api/v1/image/assets/TEMP/74a2ad2c9e811e1ec4468fbfe68950c764ecb289?width=286",
-  "https://api.builder.io/api/v1/image/assets/TEMP/5dbabffdfe91ba392764d797c7d2f9625c429bb0?width=286",
-  "https://api.builder.io/api/v1/image/assets/TEMP/2a64437c9be706c50773da974ed898eff98665d5?width=286",
-  "https://api.builder.io/api/v1/image/assets/TEMP/a63cb7a2a0de6cb60919b89719e60231ac0f9c0f?width=284",
-  "https://api.builder.io/api/v1/image/assets/TEMP/1bbca1ac6708ff5a38af946baaa0a25369680091?width=286",
+  "/images/logos/client_logos/Redbull.png",
+  "/images/logos/client_logos/Bloomberg.png",
+  "/images/logos/client_logos/Marriot.png",
+  "/images/logos/client_logos/Ntt.png",
+  "/images/logos/client_logos/TheMet.png",
+  "/images/logos/client_logos/PhiladelphiaMusuemOfArt.png",
+  "/images/logos/client_logos/Flik.png",
+  "/images/logos/client_logos/ConcourseDeElegance.png",
 ];
 
 function Stat({ value, children }: { value: string; children: string }) {
@@ -49,8 +49,7 @@ export default function Index() {
         <section className="relative z-10 flex min-h-[764px] w-full items-center justify-center overflow-hidden px-6 py-16 sm:px-10 md:min-h-[933px] md:px-[227px] md:py-24 lg:px-[451px] lg:py-[244px]">
         <div className="relative flex w-full max-w-[537px] flex-col items-start gap-4 border-l-2 border-black pl-4 md:gap-[17px] md:pl-4 lg:w-[537px] lg:max-w-none">
           <HeroReveal delay={0} className="relative flex h-[137px] w-full items-end overflow-hidden p-3 md:h-[213px] md:p-4 lg:w-[537px]">
-            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/9d522960d55a0d31b5abd019468d65f389a25ed0?width=862')" }} />
-            <div className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3789a5debe2851ff09d5f8b155ebd1dfadac505?width=1038')" }} />
+            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/hero/anthony-portrait.png')" }} />
             <span className="relative font-sans text-[26px] font-normal uppercase leading-none text-white">Anthony Shrout</span>
           </HeroReveal>
           <HeroReveal delay={0.15} className="relative w-full lg:w-[519px]">
@@ -65,9 +64,9 @@ export default function Index() {
       </section>
 
       <Reveal className="relative z-10 flex w-full items-center justify-center overflow-hidden bg-transparent px-0 py-0">
-        <img className="hidden w-full max-w-[1061px] mix-blend-multiply lg:block" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd92a5cb556b54145abef37a4ce445ca2" alt="Anthony" />
-        <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd92a5cb556b54145abef37a4ce445ca2" alt="Anthony" />
-        <img className="w-full mix-blend-multiply md:hidden" src="https://cdn.builder.io/api/v1/image/assets%2F0fed82f307b44ac3aa54a5572c541467%2Fd92a5cb556b54145abef37a4ce445ca2" alt="Anthony" />
+        <img className="w-full max-w-[1061px] mix-blend-multiply md:hidden" src="/images/hero/Nameplate-mobile.png" alt="Anthony Shrout" />
+        <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src="/images/hero/Nameplate-tablet.png" alt="Anthony Shrout" />
+        <img className="hidden w-full max-w-[1061px] mix-blend-multiply lg:block" src="/images/hero/Nameplate.png" alt="Anthony Shrout" />
       </Reveal>
       </WhiteGrainBackground>
 
