@@ -95,7 +95,7 @@ export default function Index() {
       </div>
       </WhiteGrainBackground>
 
-      <BlackGrainBackground id="services" className="flex w-full items-center px-6 py-20 sm:px-10 md:px-[30px] md:py-[151px] lg:px-[30px] lg:py-[151px]">
+      <WhiteGrainBackground id="services" className="flex w-full items-center px-6 py-20 sm:px-10 md:px-[30px] md:py-[151px] lg:px-[30px] lg:py-[151px]">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/872eb4421166530379c4a733827e95d380a961a8?width=2880')" }} />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative mx-auto flex w-full max-w-[931px] flex-col items-start gap-6 border-l-[1.56px] border-white pl-4 md:flex-row md:items-end md:justify-between md:gap-10">
@@ -105,7 +105,7 @@ export default function Index() {
           </div>
           <div className="flex items-center gap-4"><StarBurst className="h-[30px] w-[30px]" /><TriangleIcon className="h-[24px] w-[32px]" /><CloverIcon className="h-[27px] w-[29px]" /></div>
         </div>
-      </BlackGrainBackground>
+      </WhiteGrainBackground>
 
       <WhiteGrainBackground className="min-h-[900px] px-2 py-16 sm:px-10 md:min-h-[1100px] md:px-[94px] lg:min-h-[1278px] lg:px-[94px] lg:py-16 2xl:px-[346px]">
         <div className="relative mx-auto flex w-full max-w-[748px] flex-col items-center gap-11 md:max-w-[748px] lg:max-w-[748px] 2xl:max-w-[1100px]">
@@ -123,12 +123,12 @@ export default function Index() {
         <img src={reelsAccentRight} alt="" aria-hidden="true" className="pointer-events-none absolute -right-10 top-[31%] hidden h-[215px] w-[282.5px] max-w-none object-contain lg:block lg:h-[260px] lg:w-[340px]" />
       </WhiteGrainBackground>
 
-      <BlackGrainBackground className="px-6 py-10 md:px-[66px] md:py-14 lg:py-[56px]">
+      <WhiteGrainBackground className="px-6 py-10 md:px-[66px] md:py-14 lg:py-[56px]">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3036b7f365228fe8d85f483391f2da0e7fc3dc9?width=2880')" }} />
         <div className="relative mx-auto flex max-w-[1308px] flex-col divide-y divide-white/70 md:flex-row md:divide-x md:divide-y-0">
           <Stat value="15+">Years in Cooperate &amp; Event Production</Stat><Stat value="50+">Brand Campaign Projects</Stat><Stat value="National">Broadcast &amp; Live Event Credits</Stat>
         </div>
-      </BlackGrainBackground>
+      </WhiteGrainBackground>
 
       <WhiteGrainBackground id="about" className="scroll-mt-[63px] px-6 py-24 md:px-[50px] md:py-[140px] lg:px-[calc((100%-758px)/2)] lg:py-[162px]">
         <img src={aboutAccent} alt="" aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[120%] w-[110%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain opacity-70 sm:h-[125%] lg:h-[135%] lg:w-[842px]" />
