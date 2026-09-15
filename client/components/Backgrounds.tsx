@@ -4,7 +4,7 @@ type GrainTone = "white" | "black";
 
 const grainAssets: Record<GrainTone, string> = {
   white: "/images/backgrounds/Grain_White.png",
-  black: "/images/backgrounds/Grain_Black.jpg",
+  black: "/images/backgrounds/Grain_Black.png",
 };
 
 export function GrainBackground({
