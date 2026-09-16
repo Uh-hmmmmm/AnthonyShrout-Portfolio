@@ -19,7 +19,7 @@ function Field({
 }) {
   return (
     <label
-      className={`flex flex-col gap-2 font-sans text-[20px] text-[#1A0A00] sm:text-[24px] ${className}`}
+      className={`flex flex-col gap-2 font-sans text-[16px] text-[#1A0A00] sm:text-[18px] ${className}`}
     >
       {label}
       {as === "textarea" ? (
@@ -52,15 +52,24 @@ export default function Contact() {
 
       <WhiteGrainBackground className="flex w-full flex-col items-stretch gap-16 px-6 py-16 sm:px-10 md:py-24 lg:flex-row lg:items-start lg:justify-center lg:gap-11 lg:px-14 lg:py-[151px]">
         <Reveal className="flex w-full max-w-[484px] flex-col items-start gap-8 border-l-2 border-black pl-4 text-left lg:pl-[17px]">
-          <h2 className="font-sans text-[36px] font-bold uppercase leading-none text-black sm:text-[42px] lg:text-[50px]">
+          <h2 className="font-sans text-[28px] font-bold uppercase leading-none text-black sm:text-[32px] lg:text-[36px]">
             Anthony Shrout
           </h2>
-          <p className="font-sans text-[20px] leading-relaxed text-black sm:text-[26px] lg:text-[32px]">
-            609-468-6002
-            <br />
-            anthonyshrout@gmail.com
-            <br />
-            linkedin.com/in/AnthonyShrout
+          <p className="flex flex-col gap-1 font-sans text-[16px] leading-relaxed text-black sm:text-[18px] lg:text-[20px]">
+            <a href="tel:6094686002" className="transition-opacity hover:opacity-70">
+              609-468-6002
+            </a>
+            <a href="mailto:anthonyshrout@gmail.com" className="transition-opacity hover:opacity-70">
+              anthonyshrout@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/AnthonyShrout"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity hover:opacity-70"
+            >
+              linkedin.com/in/AnthonyShrout
+            </a>
           </p>
           <div className="flex w-full max-w-[430px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <a
@@ -71,19 +80,19 @@ export default function Contact() {
             </a>
             <a
               href="tel:6094686002"
-              className="flex items-center justify-center bg-black px-6 py-3 font-sans text-[16px] uppercase text-white transition-opacity hover:opacity-80 sm:text-[18px]"
+              className="flex items-center justify-center border-[1.5px] border-black bg-black px-6 py-3 font-sans text-[16px] uppercase text-white transition-colors hover:bg-white hover:text-black sm:text-[18px]"
             >
-              609 468 6002
+              Call
             </a>
           </div>
-          <p className="font-sans text-[20px] leading-tight text-black sm:text-[26px] lg:text-[32px]">
+          <p className="font-sans text-[16px] leading-tight text-black sm:text-[18px] lg:text-[20px]">
             <strong className="font-bold">New York Metro Area</strong> Available for
             travel nationally
           </p>
         </Reveal>
 
         <Reveal delay={0.1} className="flex w-full max-w-[736px] flex-col items-stretch gap-8">
-          <p className="font-sans text-[18px] leading-snug text-black sm:text-[22px] lg:text-[24px]">
+          <p className="font-sans text-[16px] leading-snug text-black sm:text-[18px] lg:text-[20px]">
             Whether you have a brief ready or just an idea — reach out. Response
             time is typically within one business day.
           </p>
@@ -101,7 +110,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="self-start bg-black px-8 py-3 font-sans text-[18px] uppercase text-white transition-opacity hover:opacity-80"
+              className="self-start border-[1.5px] border-black bg-black px-8 py-3 font-sans text-[18px] uppercase text-white transition-colors hover:bg-white hover:text-black"
             >
               Send Message
             </button>
