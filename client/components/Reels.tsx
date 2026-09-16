@@ -1,9 +1,10 @@
 import { WhiteGrainBackground } from "@/components/Backgrounds";
 import { Reveal } from "@/components/motion/Reveal";
 import { Link } from "react-router-dom";
+import { asset } from "@/lib/asset";
 
-const reelsAccentLeft = "/images/reels/BG Accent Left.svg";
-const reelsAccentRight = "/images/reels/BG Accent Right.svg";
+const reelsAccentLeft = asset("/images/reels/BG Accent Left.svg");
+const reelsAccentRight = asset("/images/reels/BG Accent Right.svg");
 
 function ReelsMark() {
   return (
@@ -68,13 +69,13 @@ export default function Reels({ className = "" }: { className?: string }) {
           <Reveal delay={0.05}>
             <ReelCard
               title="Producer | Technical Director"
-              image="/images/reels/Reel1_Temp.png"
+              image={asset("/images/reels/Reel1_Temp.png")}
             />
           </Reveal>
           <Reveal delay={0.15}>
             <ReelCard
               title="Producer | Editor"
-              image="/images/reels/Reel2_temp.png"
+              image={asset("/images/reels/Reel2_temp.png")}
               reverse
             />
           </Reveal>

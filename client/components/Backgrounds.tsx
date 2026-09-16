@@ -1,10 +1,11 @@
 import type { CSSProperties, HTMLAttributes, ReactNode } from "react";
+import { asset } from "@/lib/asset";
 
 type GrainTone = "white" | "black";
 
 const grainAssets: Record<GrainTone, string> = {
-  white: "/images/backgrounds/Grain_White.png",
-  black: "/images/backgrounds/Grain_Black.png",
+  white: asset("/images/backgrounds/Grain_White.png"),
+  black: asset("/images/backgrounds/Grain_Black.png"),
 };
 
 export function GrainBackground({

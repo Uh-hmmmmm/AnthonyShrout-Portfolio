@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { WhiteGrainBackground } from "@/components/Backgrounds";
 import { Reveal } from "@/components/motion/Reveal";
+import { asset } from "@/lib/asset";
 
-const grainCircle = "/images/backgrounds/Grain Circle.png";
+const grainCircle = asset("/images/backgrounds/Grain Circle.png");
 
 export default function PreFooter() {
   return (

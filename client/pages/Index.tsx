@@ -4,8 +4,9 @@ import Reels from "@/components/Reels";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 import { HeroReveal, Reveal } from "@/components/motion/Reveal";
 import { Link } from "react-router-dom";
+import { asset } from "@/lib/asset";
 
-const starAsset = "/images/hero/Star.svg";
+const starAsset = asset("/images/hero/Star.svg");
 function StarBurst({ className = "" }: { className?: string }) {
   return <img src={starAsset} alt="" aria-hidden="true" className={`object-contain ${className}`} />;
 }
@@ -27,14 +28,14 @@ function CloverIcon({ className = "" }: { className?: string }) {
 }
 
 const logoSources = [
-  "/images/logos/client_logos/Redbull.png",
-  "/images/logos/client_logos/Bloomberg.png",
-  "/images/logos/client_logos/Marriot.png",
-  "/images/logos/client_logos/Ntt.png",
-  "/images/logos/client_logos/TheMet.png",
-  "/images/logos/client_logos/PhiladelphiaMusuemOfArt.png",
-  "/images/logos/client_logos/Flik.png",
-  "/images/logos/client_logos/ConcourseDeElegance.png",
+  asset("/images/logos/client_logos/Redbull.png"),
+  asset("/images/logos/client_logos/Bloomberg.png"),
+  asset("/images/logos/client_logos/Marriot.png"),
+  asset("/images/logos/client_logos/Ntt.png"),
+  asset("/images/logos/client_logos/TheMet.png"),
+  asset("/images/logos/client_logos/PhiladelphiaMusuemOfArt.png"),
+  asset("/images/logos/client_logos/Flik.png"),
+  asset("/images/logos/client_logos/ConcourseDeElegance.png"),
 ];
 
 function Stat({ value, children }: { value: string; children: string }) {
@@ -49,7 +50,7 @@ export default function Index() {
         <section className="relative z-10 flex min-h-[764px] w-full items-center justify-center overflow-hidden px-6 py-16 sm:px-10 md:min-h-[933px] md:px-[227px] md:py-24 lg:px-[451px] lg:py-[244px]">
         <div className="relative flex w-full max-w-[537px] flex-col items-start gap-4 border-l-2 border-black pl-4 md:gap-[17px] md:pl-4 lg:w-[537px] lg:max-w-none">
           <HeroReveal delay={0} className="relative flex h-[137px] w-full items-start justify-end overflow-hidden p-3 md:h-[213px] md:p-4 lg:w-[537px]">
-            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/hero/anthony-portrait.png')" }} />
+            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${asset("/images/hero/anthony-portrait.png")}')` }} />
             <span className="relative font-sans text-[26px] font-normal uppercase leading-none text-white">Anthony Shrout</span>
           </HeroReveal>
           <HeroReveal delay={0.15} className="relative w-full lg:w-[519px]">
@@ -64,9 +65,9 @@ export default function Index() {
       </section>
 
       <Reveal className="relative z-10 flex w-full items-center justify-center overflow-hidden bg-transparent px-0 py-0">
-        <img className="w-full max-w-[1061px] mix-blend-multiply md:hidden" src="/images/hero/Nameplate-mobile.png" alt="Anthony Shrout" />
-        <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src="/images/hero/Nameplate-tablet.png" alt="Anthony Shrout" />
-        <img className="hidden w-full max-w-[1061px] mix-blend-multiply lg:block" src="/images/hero/Nameplate.png" alt="Anthony Shrout" />
+        <img className="w-full max-w-[1061px] mix-blend-multiply md:hidden" src={asset("/images/hero/Nameplate-mobile.png")} alt="Anthony Shrout" />
+        <img className="hidden w-full max-w-[1061px] mix-blend-multiply md:block lg:hidden" src={asset("/images/hero/Nameplate-tablet.png")} alt="Anthony Shrout" />
+        <img className="hidden w-full max-w-[1061px] mix-blend-multiply lg:block" src={asset("/images/hero/Nameplate.png")} alt="Anthony Shrout" />
       </Reveal>
       </WhiteGrainBackground>
 
