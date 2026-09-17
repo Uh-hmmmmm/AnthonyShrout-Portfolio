@@ -1,6 +1,9 @@
 import Footer from "@/components/Footer";
 import { BlackGrainBackground, WhiteGrainBackground } from "@/components/Backgrounds";
 import { HeroReveal, Reveal } from "@/components/motion/Reveal";
+import { asset } from "@/lib/asset";
+
+const headshot = asset("/images/contact/Headshot.png");
 
 function Field({
   label,
@@ -52,6 +55,11 @@ export default function Contact() {
 
       <WhiteGrainBackground className="flex w-full flex-col items-stretch gap-16 px-6 py-16 sm:px-10 md:py-24 lg:flex-row lg:items-start lg:justify-center lg:gap-11 lg:px-14 lg:py-[151px]">
         <Reveal className="flex w-full max-w-[484px] flex-col items-start gap-8 border-l-2 border-black pl-4 text-left lg:pl-[17px]">
+          <img
+            src={headshot}
+            alt="Anthony Shrout"
+            className="aspect-square w-[180px] border-2 border-black object-cover sm:w-[200px] lg:w-[220px]"
+          />
           <h2 className="font-sans text-[28px] font-bold uppercase leading-none text-black sm:text-[32px] lg:text-[36px]">
             Anthony Shrout
           </h2>
