@@ -25,11 +25,13 @@ function ReelsMark() {
 
 function ReelCard({
   title,
-  image,
+  videoId,
+  aspect = "16 / 9",
   reverse = false,
 }: {
   title: string;
-  image: string;
+  videoId: string;
+  aspect?: string;
   reverse?: boolean;
 }) {
   return (
@@ -41,11 +43,16 @@ function ReelCard({
       >
         {title}
       </h3>
-      <div className="relative w-full overflow-hidden">
-        <img src={image} alt={title} className="aspect-[152/85] w-full object-cover" />
-        <div className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/60 sm:h-[158px] sm:w-[158px]">
-          <span className="ml-1 block h-0 w-0 border-y-[12px] border-l-[20px] border-y-transparent border-l-white sm:border-y-[30px] sm:border-l-[52px]" />
-        </div>
+      <div className="relative w-full overflow-hidden" style={{ aspectRatio: aspect }}>
+        <iframe
+          src={`https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
+          className="absolute inset-0 h-full w-full"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          allowFullScreen
+          title={title}
+          referrerPolicy="strict-origin-when-cross-origin"
+          frameBorder={0}
+        />
       </div>
     </article>
   );
@@ -69,13 +76,15 @@ export default function Reels({ className = "" }: { className?: string }) {
           <Reveal delay={0.05}>
             <ReelCard
               title="Producer | Technical Director"
-              image={asset("/images/reels/Reel1_Temp.png")}
+              videoId="1230962154"
+              aspect="16 / 9"
             />
           </Reveal>
           <Reveal delay={0.15}>
             <ReelCard
               title="Producer | Editor"
-              image={asset("/images/reels/Reel2_temp.png")}
+              videoId="1230992877"
+              aspect="4 / 3"
               reverse
             />
           </Reveal>
